@@ -1,0 +1,6 @@
+{
+  "name": "CodenPixels",
+  "description": "A modern, premium, responsive, and highly interactive website for CodenPixels, a technology agency specializing in custom web design, full-stack software development, and UI/UX solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
