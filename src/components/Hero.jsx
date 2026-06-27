@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Server, Layers, Shield, ArrowRight } from 'lucide-react';
 
-const heroDashboardImage = '/src/assets/images/hero_dashboard_clean_1781549662475.jpg';
+import heroDashboardImage from '../assets/images/hero_dashboard_clean_1781549662475.jpg';
 
 export const Hero = ({ setActiveTab }) => {
   return (
