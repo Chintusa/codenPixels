@@ -43,7 +43,7 @@ const [loading, setLoading] = useState(false); // This state checks whether the 
     else if (estComplexity === 'Realtime Node Mesh') complexityMultiplier = 2.25;
 
 
-    // Total hours is calculated by multiplying base hours with complexity multiplier.
+        // Total hours is calculated by multiplying base hours with complexity multiplier.
     // Math.round() rounds it to the nearest whole number.
     let totalHours = Math.round(basePages * complexityMultiplier);
     let totalPrice = totalHours * baseRate;
@@ -61,7 +61,7 @@ const [loading, setLoading] = useState(false); // This state checks whether the 
    // This calls the function and stores the result in estimate object.(hours, price, deliveryWeeks)
   const estimate = calculateEstimate();
 
-  // This function applies the calculated estimate to the contact form fields.
+   // This function applies the calculated estimate to the contact form fields.
   // It runs when user clicks on "Auto-Populate Specifics to Form" button.
   const handleApplyEstimateToForm = () => {
     let budgetBucket = '₹15,000 - ₹30,000';
@@ -74,7 +74,7 @@ const [loading, setLoading] = useState(false); // This state checks whether the 
     setForm(prev => ({
       ...prev,
       budget: budgetBucket,
-      message: `Hi CodenPixels team, I evaluated my project scope using your Estimator tool. I have approximately ${estPageCount} key pages/screens with a complexity level of "${estComplexity}". The estimated project scope is around ${estimate.hours} hours, with an approximate cost of ₹${estimate.price.toLocaleString('en-IN')} and expected delivery in ${estimate.deliveryWeeks} week(s). Let's arrange a discussion call to plan the project properly.`
+      message: `Hi CodenPixel team, I evaluated my project scope using your Estimator tool. I have approximately ${estPageCount} key pages/screens with a complexity level of "${estComplexity}". The estimated project scope is around ${estimate.hours} hours, with an approximate cost of ₹${estimate.price.toLocaleString('en-IN')} and expected delivery in ${estimate.deliveryWeeks} week(s). Let's arrange a discussion call to plan the project properly.`
     }));
 
     const formContainer = document.getElementById('actual-contact-form');
@@ -142,8 +142,8 @@ const [loading, setLoading] = useState(false); // This state checks whether the 
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: 'New Project Enquiry from CodenPixels Website',
-          from_name: 'CodenPixels Website',
+          subject: 'New Project Enquiry from CodenPixel Website',
+          from_name: 'CodenPixel Website',
           name: form.name,
           email: form.email,
           company: form.company || 'Not provided',
@@ -188,10 +188,7 @@ const [loading, setLoading] = useState(false); // This state checks whether the 
   };
 
   return (
-    <section
-      className="py-12 sm:py-20 md:py-28 lg:py-32 bg-transparent relative overflow-hidden font-sans"
-      id="contact"
-    >
+    <section className="pt-0 pb-8 sm:pt-4 sm:pb-16 md:pt-8 md:pb-24 lg:pt-10 lg:pb-28 bg-transparent relative overflow-hidden" id="contact">
       {/* Visual glow elements */}
       <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
@@ -241,7 +238,7 @@ const [loading, setLoading] = useState(false); // This state checks whether the 
           {/* Left Column: Interactive Estimator Panel */}
           <div className="lg:col-span-5 bg-white/40 backdrop-blur-md border border-white/40 shadow-lg rounded-3xl p-5 sm:p-6 md:p-8 animate-fadeIn">
             <span className="text-slate-400 font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-widest">
-              
+              // PROJECT ESTIMATOR
             </span>
 
             <div className="flex items-center gap-2 mt-3.5 sm:mt-4 mb-5 sm:mb-6">
@@ -316,7 +313,7 @@ const [loading, setLoading] = useState(false); // This state checks whether the 
             {/* Calculated summary panel */}
             <div className="bg-white/55 backdrop-blur-sm border border-white/35 p-4 sm:p-6 rounded-2xl mb-5 sm:mb-6 shadow-sm">
               <span className="text-[9px] sm:text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest block mb-3 sm:mb-4">
-                
+                // CALCULATED SUMMARY
               </span>
 
               <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
@@ -367,7 +364,7 @@ const [loading, setLoading] = useState(false); // This state checks whether the 
           <div className="lg:col-span-7 h-full" id="actual-contact-form">
             <div className="bg-white/40 backdrop-blur-md border border-white/40 p-5 sm:p-8 md:p-10 shadow-lg rounded-3xl relative animate-fadeIn">
               <span className="text-slate-400 font-mono text-[10px] sm:text-xs font-semibold uppercase tracking-widest block mb-3 sm:mb-4">
-                
+                // CONTACT_FORM_v4
               </span>
 
               {success ? (

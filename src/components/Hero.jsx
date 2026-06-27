@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Server, Layers, Shield, ArrowRight } from 'lucide-react';
 
-import heroDashboardImage from '../assets/images/hero_dashboard_clean_1781549662475.jpg';
+const heroDashboardImage = '/src/assets/images/hero_dashboard_clean_1781549662475.jpg';
 
 export const Hero = ({ setActiveTab }) => {
   return (
@@ -26,7 +26,7 @@ export const Hero = ({ setActiveTab }) => {
           </span>
 
           <h1 className="text-3xl xs:text-4xl sm:text-5xl xl:text-6xl font-display font-extrabold sm:font-black tracking-tight text-slate-900 leading-[1.125] sm:leading-[1.1]">
-            Transforming Ideas Into <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">Powerful Digital</span> Solutions
+            Transforming Ideas Into <span className="text-[#2563EB]">Powerful Digital</span> Solutions
           </h1>
 
           <p className="mt-4 sm:mt-6 text-slate-500 font-sans text-sm sm:text-base md:text-lg lg:text-xl font-normal sm:font-medium leading-relaxed max-w-xl">

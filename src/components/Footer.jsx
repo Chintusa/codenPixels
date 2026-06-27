@@ -37,12 +37,26 @@ export const Footer = ({ setActiveTab }) => {
           
           {/* Column 1: Company Meta */}
           <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-2 font-display font-extrabold text-2xl tracking-tight text-white">
-              <div className="bg-gradient-to-tr from-primary to-secondary p-2 rounded-xl text-white shadow-sm flex items-center justify-center">
-                <Terminal size={18} />
-              </div>
-              <span>CodeN<span className="text-[#06B6D4]">Pixels</span></span>
-            </div>
+            <button
+          onClick={() => handleNavigation('home')}
+          className="flex items-center gap-3 select-none cursor-pointer group"
+        >
+          <img
+            src="/logo.png"
+            alt="CodeNPixel Logo"
+            className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+
+          <div className="hidden sm:flex flex-col items-start leading-none">
+            <h1 className="text-lg sm:text-xl md:text-2xl font-extrabold tracking-tight">
+              <span className="text-white-900">Code</span>
+              <span className="text-white-900">N</span>
+              <span className="text-[#2563EB]">Pixel</span>
+            </h1>
+
+            
+          </div>
+        </button>
             <p className="text-slate-400 text-sm leading-relaxed">
               We design and engineer secure, scalable, and beautifully animated full-stack digital products that help modern startups and enterprises grow worldwide.
             </p>
@@ -124,7 +138,7 @@ export const Footer = ({ setActiveTab }) => {
           </div>
 
           {/* Column 4: Newsletter Box */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-display font-semibold text-sm tracking-wider uppercase mb-6">
               Stay Updated
             </h3>
@@ -160,7 +174,7 @@ export const Footer = ({ setActiveTab }) => {
                 <span className="text-xs text-red-400 font-medium">{error}</span>
               )}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Divider & Copyright */}

@@ -5,7 +5,7 @@ import LucideIcon from './LucideIcon';
 
 export const Services = ({ setActiveTab }) => {
   return (
-    <section className="py-12 sm:py-20 md:py-28 lg:py-32 bg-transparent relative overflow-hidden" id="services">
+    <section className="pt-0 pb-8 sm:pt-4 sm:pb-16 md:pt-8 md:pb-24 lg:pt-10 lg:pb-28 bg-transparent relative overflow-hidden" id="services">
       {/* Decorative colored grid spots */}
       <div className="absolute top-1/4 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
@@ -71,7 +71,7 @@ export const Services = ({ setActiveTab }) => {
 
                 <div className="relative z-10">
                   <span className="text-[9px] font-mono font-bold text-slate-400 tracking-wider">
-                    {/* SERVICE : {srv.id.toUpperCase()} */}
+                    SERVICE : {srv.id.toUpperCase()}
                   </span>
                   
                   <h3 className="mt-1 text-lg sm:text-xl font-display font-bold sm:font-extrabold text-slate-900 group-hover:text-primary transition-colors">

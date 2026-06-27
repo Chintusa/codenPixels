@@ -20,10 +20,7 @@ export const Projects = () => {
   };
 
   return (
-    <section
-      className="py-12 sm:py-20 md:py-28 lg:py-32 bg-transparent relative overflow-hidden"
-      id="projects"
-    >
+   <section className="pt-0 pb-8 sm:pt-4 sm:pb-16 md:pt-8 md:pb-24 lg:pt-10 lg:pb-28 bg-transparent relative overflow-hidden" id="projects">
       {/* Dynamic graphic background elements */}
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[140px] pointer-events-none select-none" />
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-[#06B6D4]/5 rounded-full blur-[120px] pointer-events-none select-none" />
@@ -118,7 +115,7 @@ export const Projects = () => {
 
                   {/* Text Meta */}
                   <span className="text-xs font-mono font-semibold text-slate-400">
-                    {/* // TYPE : {project.type.toUpperCase()} */}
+                    // TYPE : {project.type.toUpperCase()}
                   </span>
 
                   <h3 className="mt-1 text-lg font-display font-bold text-slate-900 group-hover:text-primary transition-colors">

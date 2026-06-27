@@ -57,7 +57,7 @@ export const About = ({ setActiveTab }) => {
   ];
 
   return (
-    <section className="py-12 sm:py-20 md:py-28 lg:py-32 bg-transparent relative overflow-hidden" id="about">
+    <section className="pt-0 pb-8 sm:pt-4 sm:pb-16 md:pt-8 md:pb-24 lg:pt-10 lg:pb-28 bg-transparent relative overflow-hidden" id="about">
       {/* Immersive Section-level background structures */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#8B5CF6]/5 rounded-full blur-3xl pointer-events-none select-none" />
       <div className="absolute bottom-1/3 right-0 w-80 h-80 bg-[#2563EB]/5 rounded-full blur-3xl pointer-events-none select-none" />
@@ -99,7 +99,7 @@ export const About = ({ setActiveTab }) => {
           {/* Tabs Navigation */}
           <div className="lg:col-span-4 bg-white/20 p-5 sm:p-6 md:p-8 flex flex-col justify-between border-r border-white/20">
             <div>
-              <h3 className="text-xs font-mono tracking-widest text-slate-450 uppercase mb-4 sm:mb-6"></h3>
+              <h3 className="text-xs font-mono tracking-widest text-slate-450 uppercase mb-4 sm:mb-6">// OUR STORY</h3>
               <div className="flex flex-col gap-2">
                 {Object.keys(storySegments).map((key) => (
                   <button
@@ -119,9 +119,7 @@ export const About = ({ setActiveTab }) => {
             </div>
             
             <div className="mt-6 pt-4 border-t border-slate-200/80 hidden lg:block">
-              <span className="text-[10px] font-mono text-slate-400">
-                {/* STATUS: CORE OPERATION LIVE */}
-                </span>
+              <span className="text-[10px] font-mono text-slate-400">STATUS: CORE OPERATION LIVE</span>
             </div>
           </div>
 
@@ -156,7 +154,7 @@ export const About = ({ setActiveTab }) => {
               "Deliver innovative digital solutions that empower businesses."
             </p>
             <p className="mt-2 text-[10px] text-slate-400 leading-relaxed font-mono">
-              {/* // METHOD : BEAST-GRID STABILITY // CORE_STANDARD_REV_1 // */}
+              // METHOD : BEAST-GRID STABILITY // CORE_STANDARD_REV_1 //
             </p>
           </div>
 
@@ -173,7 +171,7 @@ export const About = ({ setActiveTab }) => {
               "Become a trusted technology partner worldwide."
             </p>
             <p className="mt-2 text-[10px] text-slate-400 leading-relaxed font-mono">
-              {/* // OUTCOME : LONG-TERM ARCHITECTURAL AUTONOMY // */}
+              // OUTCOME : LONG-TERM ARCHITECTURAL AUTONOMY //
             </p>
           </div>
 

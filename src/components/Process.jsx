@@ -18,10 +18,7 @@ export const Process = () => {
   );
 
   return (
-    <section
-      className="py-12 sm:py-20 md:py-28 lg:py-32 bg-transparent relative overflow-hidden"
-      id="process"
-    >
+   <section className="pt-0 pb-8 sm:pt-4 sm:pb-16 md:pt-8 md:pb-24 lg:pt-10 lg:pb-28 bg-transparent relative overflow-hidden" id="process">
       {/* Absolute ambient lights */}
       <div className="absolute top-1/3 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 right-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
@@ -180,7 +177,7 @@ MON: OK`}</pre>
                     </div>
 
                     <span className="text-[10px] sm:text-xs font-mono text-slate-400 uppercase tracking-widest">
-                      {/* // PHASE_STG : 0{stepItem.step} */}
+                      // PHASE_STG : 0{stepItem.step}
                     </span>
 
                     <h3 className="mt-1 text-xl sm:text-2xl md:text-3xl font-display font-bold sm:font-extrabold text-slate-900 tracking-tight leading-tight">
