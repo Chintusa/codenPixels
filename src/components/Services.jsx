@@ -70,9 +70,9 @@ export const Services = ({ setActiveTab }) => {
                 </div>
 
                 <div className="relative z-10">
-                  <span className="text-[9px] font-mono font-bold text-slate-400 tracking-wider">
+                  {/* <span className="text-[9px] font-mono font-bold text-slate-400 tracking-wider">
                     SERVICE : {srv.id.toUpperCase()}
-                  </span>
+                  </span> */}
                   
                   <h3 className="mt-1 text-lg sm:text-xl font-display font-bold sm:font-extrabold text-slate-900 group-hover:text-primary transition-colors">
                     {srv.title}
