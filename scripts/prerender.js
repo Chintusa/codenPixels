@@ -341,6 +341,13 @@ async function runPrerender() {
       `<div id="root">${appHtml}</div>`
     );
 
+    // Adjust relative asset paths for subdirectories if base is relative
+    const routeDepth = route.path.split('/').filter(Boolean).length;
+    if (routeDepth > 0 && route.path !== '/404.html') {
+      const relPrefix = '../'.repeat(routeDepth);
+      html = html.replace(/(src|href)=["']\.\/([^"']+)["']/g, `$1="${relPrefix}$2"`);
+    }
+
     // Write file to target destination
     let targetFilePath;
     if (route.path === '/') {

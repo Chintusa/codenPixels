@@ -101,6 +101,7 @@ function serverlessDevPlugin(): Plugin {
 
 export default defineConfig(() => {
   return {
+    base: process.env.BASE_PATH || './',
     plugins: [react(), tailwindcss(), serverlessDevPlugin()],
     resolve: {
       alias: {
