@@ -623,24 +623,6 @@ export const PROJECTS = [
       'https://twogoco-clone-nohjy699e-prangyanjali-mehers-projects.vercel.app/'
   },
   {
-    id: 'hotel-landing-page',
-    slug: 'hotel-landing-page',
-    name: 'Serene Resort & Hotel Platform',
-    category: 'Full Stack',
-    type: 'Hospitality Web App & Booking System',
-    technologies: ['Google AI Studio', 'Gemini AI', 'React', 'Prompt Engineering', 'Web App'],
-    description:
-      'A luxury hotel landing page and reservation system designed to showcase suites, amenities, seasonal packages, and customer booking inquiries.',
-    longDescription:
-      'A luxury hospitality web platform engineered for boutique resorts and hotels. Features real-time room previews, amenity tours, special pricing packages, interactive location maps, and high-converting inquiry flows.',
-    image:
-      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG90ZWx8ZW58MHx8MHx8fDA%3D',
-    client: 'AI Studio Project',
-    featured: false,
-    liveUrl:
-      'https://aistudio.google.com/apps/1296ccff-2786-4438-ba97-a2be72ef9ced?fullscreenApplet=true&showPreview=true&showAssistant=true'
-  },
-  {
     id: 'mocktail-bar',
     slug: 'mocktail-bar',
     name: 'Artisan Mocktail & Bistro Bar',
