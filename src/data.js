@@ -1,3 +1,5 @@
+export const DATA_VERSION = 'v1794416000';
+
 export const SERVICES = [
   {
     id: 'web-development',

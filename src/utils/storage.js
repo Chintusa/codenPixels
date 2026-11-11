@@ -1,14 +1,41 @@
-import { SERVICES as defaultServices, PROJECTS as defaultProjects, TESTIMONIALS as defaultTestimonials } from '../data.js';
+import {
+  DATA_VERSION,
+  SERVICES as defaultServices,
+  PROJECTS as defaultProjects,
+  TESTIMONIALS as defaultTestimonials,
+  PROCESS_STEPS as defaultProcessSteps,
+  FAQS as defaultFaqs,
+  COMPANY_INFO as defaultCompanyInfo
+} from '../data.js';
 
 const STORAGE_KEYS = {
-  SERVICES: 'codenpixels_services_v2',
-  PROJECTS: 'codenpixels_projects_v5',
-  TESTIMONIALS: 'codenpixels_testimonials_v1',
+  VERSION: 'codenpixels_data_version',
+  SERVICES: 'codenpixels_services_data',
+  PROJECTS: 'codenpixels_projects_data',
+  TESTIMONIALS: 'codenpixels_testimonials_data',
   CURRENCY: 'codenpixels_currency_pref'
 };
 
 // Event name dispatched whenever storage is updated from dashboard
 export const STORAGE_UPDATE_EVENT = 'codenpixels_data_updated';
+
+// Auto-sync localStorage when data.js version changes
+function autoSyncWithDataVersion() {
+  if (typeof window === 'undefined') return;
+  try {
+    const currentStoredVersion = localStorage.getItem(STORAGE_KEYS.VERSION);
+    if (currentStoredVersion !== DATA_VERSION) {
+      // data.js has been updated in codebase — refresh localStorage to eliminate inconsistency
+      localStorage.setItem(STORAGE_KEYS.SERVICES, JSON.stringify(defaultServices));
+      localStorage.setItem(STORAGE_KEYS.PROJECTS, JSON.stringify(defaultProjects));
+      localStorage.setItem(STORAGE_KEYS.TESTIMONIALS, JSON.stringify(defaultTestimonials));
+      localStorage.setItem(STORAGE_KEYS.VERSION, DATA_VERSION);
+    }
+  } catch (e) {
+    console.warn('Auto-sync version check error:', e);
+  }
+}
+autoSyncWithDataVersion();
 
 function safeGet(key, defaultVal) {
   if (typeof window === 'undefined') return defaultVal;
@@ -55,6 +82,7 @@ export function addStoredService(newService) {
   };
   const updated = [item, ...current];
   saveStoredServices(updated);
+  persistToDataJs().catch(() => {});
   return item;
 }
 
@@ -64,6 +92,7 @@ export function updateStoredService(id, updatedService) {
   if (index !== -1) {
     current[index] = { ...current[index], ...updatedService };
     saveStoredServices([...current]);
+    persistToDataJs().catch(() => {});
   }
 }
 
@@ -71,6 +100,7 @@ export function deleteStoredService(id) {
   const current = getStoredServices();
   const updated = current.filter(s => s.id !== id && s.slug !== id);
   saveStoredServices(updated);
+  persistToDataJs().catch(() => {});
 }
 
 // Projects CRUD
@@ -94,6 +124,7 @@ export function addStoredProject(newProject) {
   };
   const updated = [item, ...current];
   saveStoredProjects(updated);
+  persistToDataJs().catch(() => {});
   return item;
 }
 
@@ -103,6 +134,7 @@ export function updateStoredProject(id, updatedProject) {
   if (index !== -1) {
     current[index] = { ...current[index], ...updatedProject };
     saveStoredProjects([...current]);
+    persistToDataJs().catch(() => {});
   }
 }
 
@@ -110,6 +142,7 @@ export function deleteStoredProject(id) {
   const current = getStoredProjects();
   const updated = current.filter(p => p.id !== id && p.slug !== id);
   saveStoredProjects(updated);
+  persistToDataJs().catch(() => {});
 }
 
 // Testimonials / Client Reviews CRUD
@@ -133,6 +166,7 @@ export function addStoredTestimonial(newTestimonial) {
   };
   const updated = [item, ...current];
   saveStoredTestimonials(updated);
+  persistToDataJs().catch(() => {});
   return item;
 }
 
@@ -142,6 +176,7 @@ export function updateStoredTestimonial(id, updatedTestimonial) {
   if (index !== -1) {
     current[index] = { ...current[index], ...updatedTestimonial };
     saveStoredTestimonials([...current]);
+    persistToDataJs().catch(() => {});
   }
 }
 
@@ -149,6 +184,7 @@ export function deleteStoredTestimonial(id) {
   const current = getStoredTestimonials();
   const updated = current.filter(t => t.id !== id);
   saveStoredTestimonials(updated);
+  persistToDataJs().catch(() => {});
 }
 
 // Currency Preference
@@ -165,6 +201,85 @@ export function setCurrencyPreference(curr) {
 
 export const getStoredCurrency = getCurrencyPreference;
 export const setStoredCurrency = setCurrencyPreference;
+
+// Persist directly to src/data.js via Vite serverless dev endpoint
+export async function persistToDataJs() {
+  const payload = {
+    services: getStoredServices(),
+    projects: getStoredProjects(),
+    testimonials: getStoredTestimonials()
+  };
+
+  try {
+    const res = await fetch('/api/save-data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (res.ok) {
+      const result = await res.json();
+      if (result.version && typeof window !== 'undefined') {
+        localStorage.setItem(STORAGE_KEYS.VERSION, result.version);
+      }
+      return { success: true, message: result.message || 'Saved to src/data.js successfully!' };
+    }
+    return { success: false, error: `Server responded with status ${res.status}` };
+  } catch (err) {
+    return { success: false, error: err.message };
+  }
+}
+
+// Generate the complete data.js file string
+export function generateDataJsContent() {
+  const services = getStoredServices();
+  const projects = getStoredProjects();
+  const testimonials = getStoredTestimonials();
+  const version = `v${Date.now()}`;
+
+  return `export const DATA_VERSION = '${version}';
+
+export const SERVICES = ${JSON.stringify(services, null, 2)};
+
+export const PROJECTS = ${JSON.stringify(projects, null, 2)};
+
+export const TESTIMONIALS = ${JSON.stringify(testimonials, null, 2)};
+
+export const PROCESS_STEPS = ${JSON.stringify(defaultProcessSteps, null, 2)};
+
+export const FAQS = ${JSON.stringify(defaultFaqs, null, 2)};
+
+export const COMPANY_INFO = ${JSON.stringify(defaultCompanyInfo, null, 2)};
+`;
+}
+
+// Download data.js file directly in browser
+export function downloadDataJsFile() {
+  if (typeof window === 'undefined') return;
+  const content = generateDataJsContent();
+  const blob = new Blob([content], { type: 'text/javascript' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'data.js';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Force reload data from default data.js
+export function syncFromDataJs() {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(STORAGE_KEYS.SERVICES, JSON.stringify(defaultServices));
+  localStorage.setItem(STORAGE_KEYS.PROJECTS, JSON.stringify(defaultProjects));
+  localStorage.setItem(STORAGE_KEYS.TESTIMONIALS, JSON.stringify(defaultTestimonials));
+  localStorage.setItem(STORAGE_KEYS.VERSION, DATA_VERSION);
+  window.dispatchEvent(new CustomEvent(STORAGE_UPDATE_EVENT, { detail: { action: 'sync_from_codebase' } }));
+}
 
 // Export & Import & Reset
 export function exportDatabaseJson() {
@@ -189,6 +304,7 @@ export function importDatabaseJson(jsonString) {
     if (parsed.testimonials && Array.isArray(parsed.testimonials)) {
       saveStoredTestimonials(parsed.testimonials);
     }
+    persistToDataJs().catch(() => {});
     return { success: true };
   } catch (e) {
     return { success: false, error: e.message };
@@ -196,9 +312,5 @@ export function importDatabaseJson(jsonString) {
 }
 
 export function resetAllDataToDefaults() {
-  if (typeof window === 'undefined') return;
-  localStorage.removeItem(STORAGE_KEYS.SERVICES);
-  localStorage.removeItem(STORAGE_KEYS.PROJECTS);
-  localStorage.removeItem(STORAGE_KEYS.TESTIMONIALS);
-  window.dispatchEvent(new CustomEvent(STORAGE_UPDATE_EVENT, { detail: { key: 'all' } }));
+  syncFromDataJs();
 }

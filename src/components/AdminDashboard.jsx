@@ -37,6 +37,9 @@ import {
   exportDatabaseJson,
   importDatabaseJson,
   resetAllDataToDefaults,
+  persistToDataJs,
+  downloadDataJsFile,
+  syncFromDataJs,
   STORAGE_UPDATE_EVENT
 } from '../utils/storage.js';
 
@@ -337,10 +340,36 @@ export const AdminDashboard = ({ onNavigate }) => {
   };
 
   const handleResetDefaults = () => {
-    if (confirm('Reset all reviews, services, and projects back to original defaults? Any custom additions will be cleared.')) {
+    if (confirm('Reset all reviews, services, and projects back to original data.js defaults? Any custom additions will be cleared.')) {
       resetAllDataToDefaults();
-      showNotification('All data reset to factory defaults.');
+      refreshAllData();
+      showNotification('All data reset and synced with src/data.js.');
     }
+  };
+
+  const [isSavingToFile, setIsSavingToFile] = useState(false);
+
+  const handleSaveToDataJs = async () => {
+    setIsSavingToFile(true);
+    const result = await persistToDataJs();
+    setIsSavingToFile(false);
+    if (result.success) {
+      showNotification('✅ Saved directly to src/data.js on disk! Codebase is in sync.');
+    } else {
+      downloadDataJsFile();
+      showNotification('Downloaded updated data.js! Save it into src/data.js to commit.');
+    }
+  };
+
+  const handleSyncFromDataJs = () => {
+    syncFromDataJs();
+    refreshAllData();
+    showNotification('🔄 Refreshed all data directly from src/data.js!');
+  };
+
+  const handleDownloadDataJs = () => {
+    downloadDataJsFile();
+    showNotification('📥 Downloaded updated data.js file.');
   };
 
   return (
@@ -372,25 +401,57 @@ export const AdminDashboard = ({ onNavigate }) => {
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5">
+            {/* Primary Action: Direct File System Save */}
             <button
-              onClick={handleExportJson}
+              onClick={handleSaveToDataJs}
+              disabled={isSavingToFile}
+              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-bold rounded-xl shadow-lg shadow-emerald-900/30 flex items-center gap-1.5 transition-all cursor-pointer"
+              title="Writes all current admin data directly to src/data.js on disk"
+            >
+              <Save size={14} className={isSavingToFile ? 'animate-spin' : ''} />
+              <span>{isSavingToFile ? 'Saving...' : 'Save to data.js'}</span>
+            </button>
+
+            {/* Sync from File System */}
+            <button
+              onClick={handleSyncFromDataJs}
+              className="px-3.5 py-2 bg-blue-950/60 hover:bg-blue-900/80 text-blue-200 text-xs font-semibold rounded-xl border border-blue-800/60 flex items-center gap-1.5 transition-colors cursor-pointer"
+              title="Reloads all state from src/data.js in the codebase"
+            >
+              <RotateCcw size={14} />
+              <span>Sync from data.js</span>
+            </button>
+
+            {/* Download data.js */}
+            <button
+              onClick={handleDownloadDataJs}
               className="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl border border-slate-700 flex items-center gap-1.5 transition-colors cursor-pointer"
+              title="Download fresh data.js to commit into repository"
             >
               <Download size={14} />
+              <span>Download data.js</span>
+            </button>
+
+            <button
+              onClick={handleExportJson}
+              className="px-3 py-2 bg-slate-800/80 hover:bg-slate-700 text-slate-300 text-xs font-medium rounded-xl border border-slate-700/80 flex items-center gap-1.5 transition-colors cursor-pointer"
+              title="Export database as JSON backup"
+            >
+              <Download size={13} />
               <span>Export JSON</span>
             </button>
 
-            <label className="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl border border-slate-700 flex items-center gap-1.5 transition-colors cursor-pointer">
-              <Upload size={14} />
+            <label className="px-3 py-2 bg-slate-800/80 hover:bg-slate-700 text-slate-300 text-xs font-medium rounded-xl border border-slate-700/80 flex items-center gap-1.5 transition-colors cursor-pointer">
+              <Upload size={13} />
               <span>Import JSON</span>
               <input type="file" accept=".json" onChange={handleImportJson} className="hidden" />
             </label>
 
             <button
               onClick={handleResetDefaults}
-              className="px-3.5 py-2 bg-red-950/40 hover:bg-red-900/60 text-red-300 text-xs font-semibold rounded-xl border border-red-800/50 flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-3 py-2 bg-red-950/40 hover:bg-red-900/60 text-red-300 text-xs font-medium rounded-xl border border-red-800/50 flex items-center gap-1.5 transition-colors cursor-pointer"
             >
-              <RotateCcw size={14} />
+              <RotateCcw size={13} />
               <span>Reset Defaults</span>
             </button>
           </div>
