@@ -565,7 +565,7 @@ export const PROJECTS = [
     longDescription:
       'Smart Bill is a robust, offline-first enterprise retail billing and POS system developed for busy retail and garment stores. Built by CodeNPixels, it features instant barcode/item entry, automated multi-rate GST tax compliance, keyboard-driven express checkout (F2/Ctrl+P), instant thermal printer output, PDF generation, and direct 1-tap WhatsApp invoice delivery.',
     image:
-      'https://images.unsplash.com/photo-1556742049-0a67c5574f73?w=1000&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1000&auto=format&fit=crop&q=80',
     client: 'Samaleswari Bastralay',
     featured: true,
     liveUrl: 'https://samaleswari-bastralay-billing.netlify.app/'
