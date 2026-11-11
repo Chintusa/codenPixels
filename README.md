@@ -16,7 +16,7 @@ Official website and digital service portal for **CodeNPixels** ([https://codenp
   - Portfolio Design & Personal Branding
   - Frontend Engineering (React / Next.js) & Backend APIs
   - Website Optimization & Core Web Vitals Auditing
-- **Interactive Scope & Cost Estimator**: Transparent dual-currency project pricing (INR ₹ for India, USD $ for USA/Canada/Global) with real-time scope, hours, price calculation, and 1-click form auto-population.
+- **Interactive Scope & Cost Estimator**: Transparent international project pricing (USD $ for USA, UK, Australia, Canada, and global clients) with real-time scope, hours, price calculation, and 1-click form auto-population.
 - **Interactive Showcase Carousels**:
   - 3D Recent Works Showcase Carousel with live demo links and tech stacks.
   - Client Success Stories Carousel with verified customer photos, star ratings, and product tags.

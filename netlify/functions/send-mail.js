@@ -35,7 +35,7 @@ export const handler = async (event) => {
       email,
       company = 'Not provided',
       projectType = 'Website & Web Application Development',
-      currency = 'INR',
+      currency = 'USD',
       budget = 'Not specified',
       estimated_screens = 'N/A',
       estimated_complexity = 'Standard',

@@ -1,7 +1,7 @@
 import { SERVICES as defaultServices, PROJECTS as defaultProjects, TESTIMONIALS as defaultTestimonials } from '../data.js';
 
 const STORAGE_KEYS = {
-  SERVICES: 'codenpixels_services_v1',
+  SERVICES: 'codenpixels_services_v2',
   PROJECTS: 'codenpixels_projects_v5',
   TESTIMONIALS: 'codenpixels_testimonials_v1',
   CURRENCY: 'codenpixels_currency_pref'
@@ -153,8 +153,8 @@ export function deleteStoredTestimonial(id) {
 
 // Currency Preference
 export function getCurrencyPreference() {
-  if (typeof window === 'undefined') return 'INR';
-  return localStorage.getItem(STORAGE_KEYS.CURRENCY) || 'INR';
+  if (typeof window === 'undefined') return 'USD';
+  return localStorage.getItem(STORAGE_KEYS.CURRENCY) || 'USD';
 }
 
 export function setCurrencyPreference(curr) {

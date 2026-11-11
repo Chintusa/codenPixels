@@ -58,7 +58,7 @@ export const Testimonials = ({ onNavigate }) => {
             <span>Client Success Stories</span>
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold sm:font-extrabold tracking-tight text-white leading-tight">
-            Trusted by Founders in India & Worldwide
+            Trusted by Founders in USA, UK, Australia & Worldwide
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg">
             Real feedback from business owners, startups, and product managers who built high-performing web applications, smart menus, and digital platforms with CodeNPixels.

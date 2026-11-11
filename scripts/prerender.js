@@ -135,7 +135,7 @@ function generateJsonLd(route) {
         addressCountry: COMPANY_INFO.location.countryCode
       },
       telephone: COMPANY_INFO.phone,
-      priceRange: '₹₹',
+      priceRange: '$$',
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Web Engineering & Digital Services',

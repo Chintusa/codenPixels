@@ -9,7 +9,6 @@ export const SERVICES = [
     description: 'Bespoke web applications and business websites tailored to your brand, crafted to stand out and convert visitors.',
     longDescription: 'Our web development engineering centers on architectural honesty, fast loading speeds, clean semantic code, and clear conversion hierarchy. We translate business requirements into high-performing websites and web applications that command authority. From responsive frontend layouts to resilient cloud deployments, every pixel and endpoint is crafted purposefully.',
     icon: 'Palette',
-    startingPriceInr: '₹14,999',
     startingPriceUsd: '$249',
     businessProblem: 'Many businesses struggle with slow, cookie-cutter website templates that fail to convert visitors, lack responsive adaptability, and perform poorly on Google Core Web Vitals.',
     solution: 'We build custom, bespoke web architectures from the ground up using modern component frameworks. We eliminate template bloat, ensure sub-second page loads, and create high-converting user flows that drive customer action.',
@@ -53,7 +52,6 @@ export const SERVICES = [
     description: 'Bespoke portfolio websites with interactive animations, project showcases, and resume integration for professionals and creators.',
     longDescription: 'A generic template will not win high-value clients or dream roles. We design and build ultra-modern, high-converting portfolio websites featuring smooth micro-animations, interactive project galleries, case study modals, and integrated contact forms that establish your professional authority immediately.',
     icon: 'Sparkles',
-    startingPriceInr: '₹7,999',
     startingPriceUsd: '$129',
     businessProblem: 'Professionals, freelancers, developers, and consultants often use bland PDF resumes or generic portfolio templates that fail to capture employer or client attention.',
     solution: 'We craft immersive, interactive digital portfolios that highlight your best projects, skill sets, client testimonials, and measurable achievements with 60fps animations.',
@@ -93,7 +91,6 @@ export const SERVICES = [
     description: 'Interactive contactless QR menus, digital food catalogs, and instant table ordering platforms for cafes, restaurants, and bars.',
     longDescription: 'Modernize your dining experience with instant, contactless QR digital menus. Customers scan a table QR code on their smartphone to view high-resolution dish photos, chef specials, dietary filters, and place orders directly without waiting for physical paper menus.',
     icon: 'Layers',
-    startingPriceInr: '₹12,999',
     startingPriceUsd: '$199',
     businessProblem: 'Physical paper menus are expensive to reprint whenever prices or items change, wear out quickly, and cannot showcase dynamic daily specials or dietary filters.',
     solution: 'We deliver ultra-fast, mobile-friendly QR digital menu systems with instant admin controls to update prices, photos, and item availability in seconds.',
@@ -133,16 +130,15 @@ export const SERVICES = [
     description: 'Automated invoice generation, GST/tax calculations, multi-currency billing, and client payment tracking software.',
     longDescription: 'Streamline your cash flow with custom-engineered billing and invoicing software. We design lightweight, highly secure billing engines that calculate taxes automatically (GST, VAT, Sales Tax), generate downloadable PDF invoices, track payment status, and send automated receipt reminders.',
     icon: 'CheckSquare',
-    startingPriceInr: '₹19,999',
     startingPriceUsd: '$349',
     businessProblem: 'Manual billing in spreadsheets leads to calculation errors, misplaced tax compliance records, delayed client payments, and administrative burnout.',
     solution: 'We build tailored billing and invoice management portals that automate calculations, produce branded PDF invoices with one click, and track pending receivables.',
     features: [
       'One-click PDF invoice & receipt generation',
-      'Automated GST, VAT, and regional tax rate calculation',
-      'Multi-currency support (INR ₹, USD $, EUR €, CAD $, GBP £)',
+      'Automated Sales Tax, VAT, GST and regional tax rate calculation',
+      'Multi-currency support (USD $, EUR €, GBP £, AUD $, CAD $)',
       'Customer credit management & payment milestone tracking',
-      'Automated WhatsApp and Email invoice delivery',
+      'Automated Email & WhatsApp invoice delivery',
       'Exportable financial telemetry reports (Excel, CSV, JSON)'
     ],
     technologies: ['React', 'Node.js', 'PDF Generation Engine', 'PostgreSQL', 'Tailwind CSS'],
@@ -154,12 +150,12 @@ export const SERVICES = [
     ],
     faqs: [
       {
-        question: 'Can the billing software generate GST-compliant invoices in India?',
-        answer: 'Yes! The software automatically applies CGST, SGST, IGST, and HSN/SAC codes with compliant tax breakdown tables.'
+        question: 'Can the billing software generate tax-compliant invoices for international markets (Sales Tax, VAT, GST)?',
+        answer: 'Yes! The software automatically applies regional tax rules (US Sales Tax, UK/EU VAT, Australian GST, Canadian GST/HST) with compliant tax breakdown tables.'
       },
       {
         question: 'Can it handle international billing with different currencies?',
-        answer: 'Yes, it natively supports USD, CAD, EUR, GBP, and INR with real-time conversion rates.'
+        answer: 'Yes, it natively supports USD, EUR, GBP, AUD, and CAD with real-time conversion rates.'
       }
     ]
   },
@@ -173,7 +169,6 @@ export const SERVICES = [
     description: 'Fast, intuitive Point of Sale systems with barcode scanning, instant checkout, thermal receipt printing, and stock tracking.',
     longDescription: 'Accelerate retail and checkout counters with custom cloud POS software. Designed for touchscreens, tablets, and desktop terminals, our POS software supports barcode scanning, thermal receipt printing, split payments, and real-time inventory deduction with sub-second transaction speeds.',
     icon: 'Cpu',
-    startingPriceInr: '₹29,999',
     startingPriceUsd: '$499',
     businessProblem: 'Clunky, outdated POS systems suffer from slow terminal response times, expensive monthly vendor lock-ins, and fragile hardware compatibility.',
     solution: 'We construct responsive, web-based POS software that runs on any tablet, iPad, or PC. It supports thermal printers, barcode scanners, cash drawers, and unified inventory tracking.',
@@ -213,7 +208,6 @@ export const SERVICES = [
     description: 'Centralized cloud ERP platforms connecting inventory, sales, customer management, employee rosters, and accounting.',
     longDescription: 'Off-the-shelf ERP platforms are often bloated, overly expensive, and forced around workflows that do not fit your business. We engineer bespoke, modular Cloud ERP systems that precisely align with your operational pipelines—connecting inventory, procurement, customer CRM, vendor billing, and executive analytics under a single unified pane.',
     icon: 'Database',
-    startingPriceInr: '₹49,999',
     startingPriceUsd: '$899',
     businessProblem: 'Disjointed spreadsheets, separate software tools, and lack of real-time operational visibility result in communication silos and revenue loss.',
     solution: 'We develop modular, role-based cloud ERP software where every department has tailored access, unified reporting, and automated workflow triggers.',
@@ -253,7 +247,6 @@ export const SERVICES = [
     description: 'Smart AI integrations, automated workflows, and intelligent web interfaces that modernize business operations.',
     longDescription: 'We help businesses leverage modern artificial intelligence to deliver personalized web experiences, streamline customer interactions, and automate repetitive workflows. From integrating LLM-powered assistants and intelligent search to automated content pipelines, we engineer practical, reliable AI solutions that drive measurable efficiency.',
     icon: 'Sparkles',
-    startingPriceInr: '₹24,999',
     startingPriceUsd: '$399',
     businessProblem: 'Businesses face rising operational costs and struggle to provide instant 24/7 customer assistance, dynamic content personalization, and automated business workflows.',
     solution: 'We integrate intelligent AI models (Google Gemini, OpenAI, Claude) and custom automation pipelines directly into your web applications, enabling automated customer triage, dynamic data extraction, and real-time smart interactions.',
@@ -293,7 +286,6 @@ export const SERVICES = [
     description: 'Pixel-perfect, hyper-fast, accessible interfaces built on top of modern React and Next.js stacks.',
     longDescription: 'We specialize in implementing strictly typed, highly scalable, and WCAG-accessible user interfaces. We convert Figma design systems into performant React layouts with ultra-smooth Framer Motion micro-interactions, responsive fluid grids, and optimized bundle sizes that deliver frictionless user experiences.',
     icon: 'CodeXml',
-    startingPriceInr: '₹14,999',
     startingPriceUsd: '$249',
     businessProblem: 'Sluggish UI rendering, layout shift, poor mobile usability, and non-accessible code frustrate users and drive down website conversion rates.',
     solution: 'We engineer component-driven, responsive frontend architectures with React, TypeScript, and Tailwind CSS. We prioritize sub-100ms interaction response times and 100/100 Lighthouse performance metrics.',
@@ -329,7 +321,6 @@ export const SERVICES = [
     description: 'Secure, scalable backends, database engines, and lightweight microservice routers.',
     longDescription: 'Power your digital products with enterprise-grade server logic and robust database architectures. We design secure APIs, optimize relational and NoSQL database queries, implement granular JWT/OAuth security access controls, and deploy resilient microservices that process transactions seamlessly under high concurrency.',
     icon: 'Database',
-    startingPriceInr: '₹19,999',
     startingPriceUsd: '$349',
     businessProblem: 'Unreliable backend servers, unoptimized database queries, and security vulnerabilities lead to system downtime, slow response times, and compromised user data.',
     solution: 'We construct secure, modular backend architectures using Node.js, Express, and structured database engines. We implement comprehensive authentication, database indexing, and high-speed caching for maximum resilience.',
@@ -365,7 +356,6 @@ export const SERVICES = [
     description: 'Comprehensive, end-to-end full stack web platforms engineered for business growth.',
     longDescription: 'From client-side visual modules to server-side databases and cloud deployments, we build complete full-stack ecosystems. We establish robust dev-to-production pipelines, automated testing rigs, and intuitive dashboard consoles that give your team absolute control over business metrics and customer data.',
     icon: 'Layers',
-    startingPriceInr: '₹34,999',
     startingPriceUsd: '$549',
     businessProblem: 'Managing multiple disjointed vendors for frontend, backend, and cloud hosting results in communication bottlenecks, architectural mismatches, and delayed launches.',
     solution: 'We provide unified, single-team full-stack engineering. We build cohesive architectures where frontend interfaces, backend APIs, and database layers work together in perfect harmony.',
@@ -401,7 +391,6 @@ export const SERVICES = [
     description: 'Intuitive user experiences focused on user journey mapping, interaction, and aesthetics.',
     longDescription: 'Great digital products start with understanding user behavior. We diagram detailed user empathy maps, interactive wireframes, and sequential interaction flows to eliminate user friction. We design modern screens that make complex, data-heavy operations feel effortless, intuitive, and delightful.',
     icon: 'Sparkles',
-    startingPriceInr: '₹9,999',
     startingPriceUsd: '$169',
     businessProblem: 'Confusing user interfaces and high-friction checkout or onboarding flows cause user drop-off, increased support tickets, and lost revenue.',
     solution: 'We perform user journey research, wireframing, and usability testing to craft clean, visually striking design systems in Figma that guide visitors naturally toward key conversion goals.',
@@ -437,7 +426,6 @@ export const SERVICES = [
     description: 'Connect third-party platforms, automate tasks, or build high-concurrency API integrations.',
     longDescription: 'Connect existing business tools or build custom API gateways. We create robust REST and GraphQL endpoints that facilitate secure, high-speed data exchange. We integrate payment processors (Stripe, Razorpay), CRMs (HubSpot, Salesforce), email automation engines, and custom analytics telemetry to unify your operations.',
     icon: 'Webhook',
-    startingPriceInr: '₹14,999',
     startingPriceUsd: '$249',
     businessProblem: 'Disconnected software tools, manual data re-entry, and fragile custom scripts create operational bottlenecks and data synchronization errors.',
     solution: 'We develop robust, documented API pipelines and webhook listeners that synchronize data across your business applications automatically and securely in real time.',
@@ -473,7 +461,6 @@ export const SERVICES = [
     description: 'Keeping websites secure, updated, and running at maximum performance around the clock.',
     longDescription: 'High-performing websites need proactive maintenance. We provide continuous infrastructure monitoring, asset caching, security patching, dependency upgrades, and Core Web Vitals optimization to keep your Lighthouse performance scores in the green, protecting search rankings and customer trust.',
     icon: 'Cpu',
-    startingPriceInr: '₹4,999/mo',
     startingPriceUsd: '$79/mo',
     businessProblem: 'Neglected websites suffer from degrading page speeds, broken plugins, security exploits, and sudden Google ranking drops due to poor Core Web Vitals.',
     solution: 'We provide structured monthly maintenance SLAs that include active speed optimization, dependency patching, automated cloud backups, and uptime monitoring.',
@@ -782,8 +769,8 @@ export const PROCESS_STEPS = [
 export const FAQS = [
   {
     id: 'faq-1',
-    question: 'How do you structure your project pricing for Indian & International clients?',
-    answer: 'We provide dual transparent pricing in INR (₹) for Indian businesses and USD ($) for international clients (USA, Canada, Europe). We offer fixed-scope milestone packages starting from ₹7,999 / $129 for portfolios and ₹14,999 / $249 for business websites, as well as hourly rates with zero hidden fees.',
+    question: 'How do you structure your project pricing for clients?',
+    answer: 'We provide transparent, upfront pricing in USD ($) for clients across the USA, UK, Canada, Australia, Europe, and worldwide. We offer fixed-scope milestone packages starting from $129 for portfolios and $249 for custom business websites, as well as competitive hourly rates ($15/hr) with zero hidden fees.',
     topic: 'Pricing'
   },
   {
@@ -819,7 +806,7 @@ export const FAQS = [
   {
     id: 'faq-7',
     question: 'Do you offer post-launch maintenance SLA guarantees?',
-    answer: 'Yes! We supply dedicated maintenance packages including continuous security auditing, database backup checks, Core Web Vitals speed tuning, and rapid bug-fix SLAs starting at ₹4,999/mo ($79/mo).',
+    answer: 'Yes! We supply dedicated maintenance packages including continuous security auditing, database backup checks, Core Web Vitals speed tuning, and rapid bug-fix SLAs starting at $79/mo.',
     topic: 'Support'
   }
 ];

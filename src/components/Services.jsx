@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Check, ArrowRight, IndianRupee, DollarSign, Sparkles } from 'lucide-react';
-import { getStoredServices, getStoredCurrency, STORAGE_UPDATE_EVENT } from '../utils/storage';
+import { Check, ArrowRight, DollarSign, Sparkles } from 'lucide-react';
+import { getStoredServices, STORAGE_UPDATE_EVENT } from '../utils/storage';
 import LucideIcon from './LucideIcon';
 
 export const Services = ({ onNavigate, isStandalone = false }) => {
   const [services, setServices] = useState(() => getStoredServices());
-  const [currency, setCurrency] = useState(() => getStoredCurrency());
   const [activeCategory, setActiveCategory] = useState('All');
 
   useEffect(() => {
     const handleStorageUpdate = () => {
       setServices(getStoredServices());
-      setCurrency(getStoredCurrency());
     };
     window.addEventListener(STORAGE_UPDATE_EVENT, handleStorageUpdate);
     return () => window.removeEventListener(STORAGE_UPDATE_EVENT, handleStorageUpdate);
@@ -51,7 +49,7 @@ export const Services = ({ onNavigate, isStandalone = false }) => {
             Engineered Capabilities for Modern Growth
           </HeadingTag>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg">
-            High-converting websites, Smart QR Restaurant Menus, Cloud ERPs, Billing Software, POS systems, and AI-powered digital products with transparent pricing for Indian & Global businesses.
+            High-converting websites, Smart QR Restaurant Menus, Cloud ERPs, Billing Software, POS systems, and AI-powered digital products with transparent pricing in USD ($) for clients across the USA, UK, Canada, Australia, and worldwide.
           </p>
 
           {/* Category Filter Pills */}
@@ -77,8 +75,9 @@ export const Services = ({ onNavigate, isStandalone = false }) => {
         {/* Services Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {filteredServices.map((srv) => {
-            const inrPrice = srv.startingPriceInr ? `₹${srv.startingPriceInr.toLocaleString('en-IN')}` : null;
-            const usdPrice = srv.startingPriceUsd ? `$${srv.startingPriceUsd.toLocaleString('en-US')}` : null;
+            const usdPrice = srv.startingPriceUsd
+              ? (srv.startingPriceUsd.startsWith('$') ? srv.startingPriceUsd : `$${srv.startingPriceUsd}`)
+              : null;
 
             return (
               <div
@@ -95,14 +94,12 @@ export const Services = ({ onNavigate, isStandalone = false }) => {
                       <LucideIcon name={srv.icon} size={22} className="stroke-[2] sm:size-[24px]" />
                     </div>
 
-                    {(inrPrice || usdPrice) && (
+                    {usdPrice && (
                       <div className="text-right">
                         <span className="text-[10px] font-mono text-slate-400 block uppercase">Starting from</span>
                         <div className="flex items-center gap-1 font-mono font-extrabold text-sm text-primary bg-primary/10 px-2.5 py-1 rounded-full">
-                          <span>{currency === 'USD' ? (usdPrice || inrPrice) : (inrPrice || usdPrice)}</span>
-                          <span className="text-[10px] text-slate-400 font-normal">
-                            ({currency === 'USD' ? 'USD' : 'INR'})
-                          </span>
+                          <span>{usdPrice}</span>
+                          <span className="text-[10px] text-slate-400 font-normal">USD</span>
                         </div>
                       </div>
                     )}

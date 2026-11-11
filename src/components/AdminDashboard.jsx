@@ -75,7 +75,6 @@ export const AdminDashboard = ({ onNavigate }) => {
   const [serviceForm, setServiceForm] = useState({
     title: '',
     h1Title: '',
-    startingPriceInr: '₹14,999',
     startingPriceUsd: '$249',
     description: '',
     longDescription: '',
@@ -250,7 +249,6 @@ export const AdminDashboard = ({ onNavigate }) => {
       setServiceForm({
         title: item.title || '',
         h1Title: item.h1Title || '',
-        startingPriceInr: item.startingPriceInr || '₹14,999',
         startingPriceUsd: item.startingPriceUsd || '$249',
         description: item.description || '',
         longDescription: item.longDescription || '',
@@ -264,7 +262,6 @@ export const AdminDashboard = ({ onNavigate }) => {
       setServiceForm({
         title: '',
         h1Title: '',
-        startingPriceInr: '₹14,999',
         startingPriceUsd: '$249',
         description: '',
         longDescription: '',
@@ -370,7 +367,7 @@ export const AdminDashboard = ({ onNavigate }) => {
               </h1>
             </div>
             <p className="mt-1 text-xs sm:text-sm text-slate-400">
-              Manage client reviews, customer photos, recent work showcase, services & dual currency pricing without a backend server.
+              Manage client reviews, customer photos, recent work showcase, services & USD ($) pricing without a backend server.
             </p>
           </div>
 
@@ -637,7 +634,7 @@ export const AdminDashboard = ({ onNavigate }) => {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-xl font-display font-bold text-white">Services & Pricing Matrix</h2>
-                <p className="text-xs text-slate-400">Configure starter pricing (INR ₹ and USD $) and offerings.</p>
+                <p className="text-xs text-slate-400">Configure starter pricing in USD ($) and offerings.</p>
               </div>
 
               <button
@@ -683,15 +680,9 @@ export const AdminDashboard = ({ onNavigate }) => {
 
                     <p className="text-xs text-slate-300 leading-relaxed mb-4">{srv.description}</p>
 
-                    <div className="grid grid-cols-2 gap-3 mb-4 p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
-                      <div>
-                        <span className="text-slate-400 block text-[10px] uppercase font-mono">India Starting:</span>
-                        <span className="font-bold text-emerald-400">{srv.startingPriceInr || '₹14,999'}</span>
-                      </div>
-                      <div>
-                        <span className="text-slate-400 block text-[10px] uppercase font-mono">Global Starting:</span>
-                        <span className="font-bold text-cyan-400">{srv.startingPriceUsd || '$249'}</span>
-                      </div>
+                    <div className="mb-4 p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs">
+                      <span className="text-slate-400 block text-[10px] uppercase font-mono">Starter Pricing:</span>
+                      <span className="font-bold text-cyan-400">{srv.startingPriceUsd || '$249'} USD</span>
                     </div>
 
                     <div className="space-y-1 text-xs text-slate-400">
@@ -987,27 +978,15 @@ export const AdminDashboard = ({ onNavigate }) => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-slate-300 font-semibold mb-1">India Starting Price (INR)</label>
-                      <input
-                        type="text"
-                        value={serviceForm.startingPriceInr}
-                        onChange={(e) => setServiceForm({ ...serviceForm, startingPriceInr: e.target.value })}
-                        placeholder="₹12,999"
-                        className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-slate-300 font-semibold mb-1">Global Starting Price (USD)</label>
-                      <input
-                        type="text"
-                        value={serviceForm.startingPriceUsd}
-                        onChange={(e) => setServiceForm({ ...serviceForm, startingPriceUsd: e.target.value })}
-                        placeholder="$199"
-                        className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white"
-                      />
-                    </div>
+                  <div>
+                    <label className="block text-slate-300 font-semibold mb-1">Starting Price (USD $)</label>
+                    <input
+                      type="text"
+                      value={serviceForm.startingPriceUsd}
+                      onChange={(e) => setServiceForm({ ...serviceForm, startingPriceUsd: e.target.value })}
+                      placeholder="$199"
+                      className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white"
+                    />
                   </div>
 
                   <div>

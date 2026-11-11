@@ -75,21 +75,14 @@ export const ServiceDetail = ({ service, onNavigate }) => {
             {service.longDescription}
           </p>
 
-          {(service.startingPriceInr || service.startingPriceUsd) && (
+          {service.startingPriceUsd && (
             <div className="mt-6 inline-flex flex-wrap items-center gap-3 p-3 bg-white/70 backdrop-blur-md border border-slate-200/80 rounded-2xl shadow-xs">
               <span className="text-xs font-mono font-bold text-slate-500 uppercase px-2">
                 Transparent Starter Rate:
               </span>
-              {service.startingPriceInr && (
-                <span className="text-xs font-mono font-extrabold text-primary bg-primary/10 px-3 py-1 rounded-xl">
-                  ₹{service.startingPriceInr.toLocaleString('en-IN')} (India)
-                </span>
-              )}
-              {service.startingPriceUsd && (
-                <span className="text-xs font-mono font-extrabold text-green-700 bg-green-50 border border-green-200/60 px-3 py-1 rounded-xl">
-                  ${service.startingPriceUsd.toLocaleString('en-US')} (USA / Global)
-                </span>
-              )}
+              <span className="text-xs font-mono font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-xl">
+                {service.startingPriceUsd.startsWith('$') ? service.startingPriceUsd : `$${service.startingPriceUsd}`} USD
+              </span>
             </div>
           )}
 

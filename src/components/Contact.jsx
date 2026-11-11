@@ -6,32 +6,16 @@ import {
   Sparkles,
   Calculator,
   Hourglass,
-  IndianRupee,
   DollarSign,
   Globe
 } from 'lucide-react';
-import { getStoredCurrency, setStoredCurrency, STORAGE_UPDATE_EVENT } from '../utils/storage';
+import { STORAGE_UPDATE_EVENT } from '../utils/storage';
 
 export const Contact = ({ onNavigate, isStandalone = false }) => {
   const WEB3FORMS_ACCESS_KEY = 'bfbb1c5c-3295-4e29-81d4-cdd2ac5ebd3c';
 
   const HeadingTag = isStandalone ? 'h1' : 'h2';
-
-  // Currency selection: 'INR' or 'USD'
-  const [currency, setCurrencyState] = useState(() => getStoredCurrency());
-
-  useEffect(() => {
-    const handleStorageUpdate = () => {
-      setCurrencyState(getStoredCurrency());
-    };
-    window.addEventListener(STORAGE_UPDATE_EVENT, handleStorageUpdate);
-    return () => window.removeEventListener(STORAGE_UPDATE_EVENT, handleStorageUpdate);
-  }, []);
-
-  const handleCurrencyChange = (curr) => {
-    setCurrencyState(curr);
-    setStoredCurrency(curr);
-  };
+  const currency = 'USD';
 
   // Core Contact form states
   const [form, setForm] = useState({
@@ -39,7 +23,7 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
     email: '',
     company: '',
     projectType: 'Portfolio & Personal Branding',
-    budget: currency === 'INR' ? '₹7,999 - ₹15,000' : '$129 - $350',
+    budget: '$129 - $350',
     message: ''
   });
 
@@ -54,9 +38,9 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
 
   // Calculates project hours, price, and delivery weeks
   const calculateEstimate = () => {
-    // Highly attractive and justifiable rates for winning early clients
-    // India: ₹750/hr base rate | International: $15/hr base rate
-    const baseRate = currency === 'INR' ? 750 : 15;
+    // Highly attractive and justifiable rates for global clients (USA, UK, AU, International)
+    // $15/hr base rate
+    const baseRate = 15;
     const basePages = estPageCount * 4; // ~4 hours per screen/feature
     let complexityMultiplier = 1;
 
@@ -80,28 +64,18 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
   // Applies the calculated estimate to the contact form fields
   const handleApplyEstimateToForm = () => {
     let budgetBucket = '';
-    if (currency === 'INR') {
-      if (estimate.price > 80000) budgetBucket = '₹80,000+';
-      else if (estimate.price > 50000) budgetBucket = '₹50,000 - ₹80,000';
-      else if (estimate.price > 25000) budgetBucket = '₹25,000 - ₹50,000';
-      else if (estimate.price > 12000) budgetBucket = '₹12,000 - ₹25,000';
-      else budgetBucket = '₹7,999 - ₹12,000';
-    } else {
-      if (estimate.price > 1500) budgetBucket = '$1,500+';
-      else if (estimate.price > 900) budgetBucket = '$900 - $1,500';
-      else if (estimate.price > 500) budgetBucket = '$500 - $900';
-      else if (estimate.price > 250) budgetBucket = '$250 - $500';
-      else budgetBucket = '$129 - $250';
-    }
+    if (estimate.price > 1500) budgetBucket = '$1,500+';
+    else if (estimate.price > 900) budgetBucket = '$900 - $1,500';
+    else if (estimate.price > 500) budgetBucket = '$500 - $900';
+    else if (estimate.price > 250) budgetBucket = '$250 - $500';
+    else budgetBucket = '$129 - $250';
 
-    const formattedPrice = currency === 'INR'
-      ? `₹${estimate.price.toLocaleString('en-IN')}`
-      : `$${estimate.price.toLocaleString('en-US')}`;
+    const formattedPrice = `$${estimate.price.toLocaleString('en-US')}`;
 
     setForm(prev => ({
       ...prev,
       budget: budgetBucket,
-      message: `Hi CodeNPixels team, I scoped my project using your estimator tool. My project involves approximately ${estPageCount} screens/modules with "${estComplexity}" complexity. Estimated scope is ~${estimate.hours} hours at around ${formattedPrice} (${currency}) with delivery in ~${estimate.deliveryWeeks} week(s). Let's schedule a call to discuss the requirements!`
+      message: `Hi CodeNPixels team, I scoped my project using your estimator tool. My project involves approximately ${estPageCount} screens/modules with "${estComplexity}" complexity. Estimated scope is ~${estimate.hours} hours at around ${formattedPrice} (USD) with delivery in ~${estimate.deliveryWeeks} week(s). Let's schedule a call to discuss the requirements!`
     }));
 
     const formContainer = document.getElementById('actual-contact-form');
@@ -149,9 +123,7 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
     setLoading(true);
     setSubmitError('');
 
-    const formattedPrice = currency === 'INR'
-      ? `₹${estimate.price.toLocaleString('en-IN')}`
-      : `$${estimate.price.toLocaleString('en-US')}`;
+    const formattedPrice = `$${estimate.price.toLocaleString('en-US')}`;
 
     const payload = {
       name: form.name,
@@ -251,7 +223,7 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
           email: '',
           company: '',
           projectType: 'Portfolio & Personal Branding',
-          budget: currency === 'INR' ? '₹7,999 - ₹15,000' : '$129 - $350',
+          budget: '$129 - $350',
           message: ''
         });
         setErrors({});
@@ -283,33 +255,13 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
           </HeadingTag>
 
           <p className="mt-4 text-slate-500 max-w-2xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg">
-            Estimate your project cost with our transparent calculator, tailored for both Indian & global businesses, or send your requirements directly for a free technical plan.
+            Estimate your project cost with our transparent calculator, tailored for clients across the USA, UK, Canada, Australia, and worldwide, or send your requirements directly for a free technical plan.
           </p>
 
-          {/* Currency Toggle */}
-          <div className="mt-6 inline-flex items-center p-1 bg-slate-100/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl shadow-xs">
-            <button
-              type="button"
-              onClick={() => handleCurrencyChange('INR')}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold font-sans transition-all cursor-pointer ${currency === 'INR'
-                  ? 'bg-white text-primary shadow-sm'
-                  : 'text-slate-500 hover:text-slate-800'
-                }`}
-            >
-              <IndianRupee size={14} />
-              <span>India (INR ₹)</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleCurrencyChange('USD')}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold font-sans transition-all cursor-pointer ${currency === 'USD'
-                  ? 'bg-white text-primary shadow-sm'
-                  : 'text-slate-500 hover:text-slate-800'
-                }`}
-            >
-              <DollarSign size={14} />
-              <span>USA / Global (USD $)</span>
-            </button>
+          {/* Transparent USD Pricing Badge */}
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-slate-100/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl shadow-xs text-xs font-bold text-slate-700">
+            <DollarSign size={14} className="text-emerald-600" />
+            <span>Transparent Global Pricing (USD $) • $15/hr Base Rate</span>
           </div>
         </div>
 
@@ -327,7 +279,7 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
                 </h3>
               </div>
               <span className="text-[10px] font-mono font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
-                {currency === 'INR' ? '₹750/hr Base' : '$15/hr Base'}
+                $15/hr Base
               </span>
             </div>
 
@@ -400,17 +352,11 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
 
                 <div className="flex flex-col gap-0.5 sm:gap-1 items-start">
                   <div className="flex items-center gap-1 text-[11px] sm:text-xs text-slate-500 font-medium">
-                    {currency === 'INR' ? (
-                      <IndianRupee size={12} className="text-green-600 sm:size-[13px]" />
-                    ) : (
-                      <DollarSign size={12} className="text-green-600 sm:size-[13px]" />
-                    )}
+                    <DollarSign size={12} className="text-green-600 sm:size-[13px]" />
                     <span>Starting Price</span>
                   </div>
                   <span className="text-xl sm:text-2xl font-display font-extrabold text-slate-800 font-mono">
-                    {currency === 'INR'
-                      ? `₹${estimate.price.toLocaleString('en-IN')}`
-                      : `$${estimate.price.toLocaleString('en-US')}`}
+                    ${estimate.price.toLocaleString('en-US')}
                   </span>
                 </div>
               </div>
@@ -578,7 +524,7 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
                   {/* Budget */}
                   <div>
                     <label htmlFor="contact-budget" className="block text-[10px] sm:text-xs font-bold text-slate-700 mb-1.5 sm:mb-2 tracking-wide uppercase">
-                      Budget Range ({currency})
+                      Budget Range (USD $)
                     </label>
 
                     <select
@@ -588,23 +534,11 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
                       onChange={handleInputChange}
                       className="w-full bg-white border border-slate-200 rounded-xl px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all outline-none"
                     >
-                      {currency === 'INR' ? (
-                        <>
-                          <option>₹7,999 - ₹15,000 (Starter / Portfolio)</option>
-                          <option>₹15,000 - ₹30,000 (Smart Menu / Website)</option>
-                          <option>₹30,000 - ₹60,000 (Billing / POS / Custom App)</option>
-                          <option>₹60,000 - ₹1,20,000 (Cloud ERP / Full Stack)</option>
-                          <option>₹1,20,000+ (Custom Enterprise Platform)</option>
-                        </>
-                      ) : (
-                        <>
-                          <option>$129 - $350 (Starter / Portfolio)</option>
-                          <option>$350 - $750 (Smart Menu / Business Site)</option>
-                          <option>$750 - $1,500 (Billing / POS / Web App)</option>
-                          <option>$1,500 - $3,000 (Cloud ERP / Full Stack)</option>
-                          <option>$3,000+ (Enterprise Multi-Tenant App)</option>
-                        </>
-                      )}
+                      <option>$129 - $350 (Starter / Portfolio)</option>
+                      <option>$350 - $750 (Smart Menu / Business Site)</option>
+                      <option>$750 - $1,500 (Billing / POS / Web App)</option>
+                      <option>$1,500 - $3,000 (Cloud ERP / Full Stack)</option>
+                      <option>$3,000+ (Enterprise Multi-Tenant App)</option>
                     </select>
                   </div>
 
@@ -646,7 +580,7 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
                         <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       ) : (
                         <>
-                          <span>Submit Project Request ({currency})</span>
+                          <span>Submit Project Request (USD $)</span>
                           <Send size={12} className="sm:size-[14px]" />
                         </>
                       )}
