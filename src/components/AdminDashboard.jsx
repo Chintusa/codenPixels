@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import {
   Star,
   Plus,
@@ -88,6 +89,31 @@ export const AdminDashboard = ({ onNavigate }) => {
   });
 
   const [isAddingNew, setIsAddingNew] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Lock body scroll and handle Escape key when modal is open
+  useEffect(() => {
+    if (!isAddingNew) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsAddingNew(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isAddingNew]);
 
   // Sync state from storage
   const refreshAllData = () => {
@@ -759,25 +785,43 @@ export const AdminDashboard = ({ onNavigate }) => {
         )}
 
         {/* ==========================================
-            ADD / EDIT MODALS
+            ADD / EDIT MODALS (PORTALED TO BODY, z-[100])
         =========================================== */}
-        {isAddingNew && (
-          <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
-            <div className="bg-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative my-8">
-              
-              <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-6">
-                <h3 className="text-lg sm:text-xl font-display font-bold text-white">
-                  {activeTab === 'testimonials' && (editingReview ? 'Edit Customer Review' : 'Add New Customer Review')}
-                  {activeTab === 'projects' && (editingProject ? 'Edit Project' : 'Add New Project')}
-                  {activeTab === 'services' && (editingService ? 'Edit Service & Pricing' : 'Add New Service')}
-                </h3>
+        {isAddingNew && mounted && typeof document !== 'undefined' && createPortal(
+          <div
+            className="fixed inset-0 z-[100] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-hidden"
+            onClick={() => setIsAddingNew(false)}
+            role="dialog"
+            aria-modal="true"
+          >
+            <div
+              className="bg-slate-900 border border-slate-700/80 rounded-3xl max-w-2xl w-full max-h-[calc(100vh-2.5rem)] sm:max-h-[calc(100vh-4rem)] flex flex-col shadow-2xl relative overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Sticky Top Header: Always visible, never obscured */}
+              <div className="flex items-center justify-between px-6 py-4 sm:px-8 sm:py-5 border-b border-slate-800 bg-slate-900/95 backdrop-blur-md shrink-0">
+                <div>
+                  <span className="text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-wider block">
+                    Admin Content Editor
+                  </span>
+                  <h3 className="text-lg sm:text-xl font-display font-bold text-white mt-0.5">
+                    {activeTab === 'testimonials' && (editingReview ? 'Edit Customer Review' : 'Add New Customer Review')}
+                    {activeTab === 'projects' && (editingProject ? 'Edit Project' : 'Add New Project')}
+                    {activeTab === 'services' && (editingService ? 'Edit Service & Pricing' : 'Add New Service')}
+                  </h3>
+                </div>
                 <button
+                  type="button"
                   onClick={() => setIsAddingNew(false)}
-                  className="p-2 text-slate-400 hover:text-white rounded-lg cursor-pointer"
+                  aria-label="Close modal"
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors cursor-pointer"
                 >
-                  <X size={18} />
+                  <X size={20} />
                 </button>
               </div>
+
+              {/* Scrollable Form Body */}
+              <div className="p-6 sm:p-8 overflow-y-auto flex-1 overscroll-contain">
 
               {/* Form 1: Review */}
               {activeTab === 'testimonials' && (
@@ -1092,8 +1136,10 @@ export const AdminDashboard = ({ onNavigate }) => {
                 </form>
               )}
 
+              </div>
             </div>
-          </div>
+          </div>,
+          document.body
         )}
 
       </div>

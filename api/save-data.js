@@ -63,3 +63,4 @@ export const COMPANY_INFO = ${JSON.stringify(finalCompanyInfo, null, 2)};
     });
   }
 }
+

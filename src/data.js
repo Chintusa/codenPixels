@@ -1,490 +1,576 @@
-export const DATA_VERSION = 'v1794416000';
+export const DATA_VERSION = 'v1794416723008';
 
 export const SERVICES = [
   {
-    id: 'web-development',
-    slug: 'web-development',
-    title: 'Custom Website & Web Development',
-    h1Title: 'Custom Web Development Services for High-Growth Businesses',
-    metaTitle: 'Custom Web Development Services | CodeNPixels',
-    metaDescription: 'Scalable, custom web development services engineered with React, Next.js, and modern cloud stacks. Fast, secure, and conversion-focused websites.',
-    description: 'Bespoke web applications and business websites tailored to your brand, crafted to stand out and convert visitors.',
-    longDescription: 'Our web development engineering centers on architectural honesty, fast loading speeds, clean semantic code, and clear conversion hierarchy. We translate business requirements into high-performing websites and web applications that command authority. From responsive frontend layouts to resilient cloud deployments, every pixel and endpoint is crafted purposefully.',
-    icon: 'Palette',
-    startingPriceUsd: '$249',
-    businessProblem: 'Many businesses struggle with slow, cookie-cutter website templates that fail to convert visitors, lack responsive adaptability, and perform poorly on Google Core Web Vitals.',
-    solution: 'We build custom, bespoke web architectures from the ground up using modern component frameworks. We eliminate template bloat, ensure sub-second page loads, and create high-converting user flows that drive customer action.',
-    features: [
-      'Tailored custom design systems & UI components',
-      'Mobile-first responsive layout engineering',
-      'Google Core Web Vitals performance tuning',
-      'Search engine optimized semantic HTML markup',
-      'Secure hosting configuration & SSL deployment',
-      'Conversion-rate optimized call-to-action paths'
+    "id": "web-development",
+    "slug": "web-development",
+    "title": "Custom Website & Web Development",
+    "h1Title": "Custom Web Development Services for High-Growth Businesses",
+    "metaTitle": "Custom Web Development Services | CodeNPixels",
+    "metaDescription": "Scalable, custom web development services engineered with React, Next.js, and modern cloud stacks. Fast, secure, and conversion-focused websites.",
+    "description": "Bespoke web applications and business websites tailored to your brand, crafted to stand out and convert visitors.",
+    "longDescription": "Our web development engineering centers on architectural honesty, fast loading speeds, clean semantic code, and clear conversion hierarchy. We translate business requirements into high-performing websites and web applications that command authority. From responsive frontend layouts to resilient cloud deployments, every pixel and endpoint is crafted purposefully.",
+    "icon": "Palette",
+    "startingPriceUsd": "$300",
+    "businessProblem": "Many businesses struggle with slow, cookie-cutter website templates that fail to convert visitors, lack responsive adaptability, and perform poorly on Google Core Web Vitals.",
+    "solution": "We build custom, bespoke web architectures from the ground up using modern component frameworks. We eliminate template bloat, ensure sub-second page loads, and create high-converting user flows that drive customer action.",
+    "features": [
+      "Tailored custom design systems & UI components",
+      "Mobile-first responsive layout engineering",
+      "Google Core Web Vitals performance tuning",
+      "Search engine optimized semantic HTML markup",
+      "Secure hosting configuration & SSL deployment",
+      "Conversion-rate optimized call-to-action paths"
     ],
-    technologies: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vite', 'HTML5/CSS3'],
-    benefits: [
-      'Accelerated page load speeds for higher visitor retention',
-      'Clean, maintainable codebase ready for future feature expansion',
-      'Higher search engine visibility with technical SEO fundamentals',
-      'Flawless cross-device compatibility across mobile, tablet, and desktop'
+    "technologies": [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "HTML5/CSS3"
     ],
-    faqs: [
+    "benefits": [
+      "Accelerated page load speeds for higher visitor retention",
+      "Clean, maintainable codebase ready for future feature expansion",
+      "Higher search engine visibility with technical SEO fundamentals",
+      "Flawless cross-device compatibility across mobile, tablet, and desktop"
+    ],
+    "faqs": [
       {
-        question: 'How long does a custom web development project take?',
-        answer: 'Standard business websites typically take 2 to 4 weeks, while complex multi-page web applications with custom functionality take 4 to 8 weeks depending on scope.'
+        "question": "How long does a custom web development project take?",
+        "answer": "Standard business websites typically take 2 to 4 weeks, while complex multi-page web applications with custom functionality take 4 to 8 weeks depending on scope."
       },
       {
-        question: 'Will my website be mobile-friendly and optimized for Google search?',
-        answer: 'Yes. Every website we engineer is strictly mobile-first, responsive across all screen sizes, and pre-configured with semantic HTML, structured metadata, and fast Core Web Vitals.'
+        "question": "Will my website be mobile-friendly and optimized for Google search?",
+        "answer": "Yes. Every website we engineer is strictly mobile-first, responsive across all screen sizes, and pre-configured with semantic HTML, structured metadata, and fast Core Web Vitals."
       },
       {
-        question: 'Do you provide maintenance and updates after launch?',
-        answer: 'Yes, we provide post-launch support and continuous maintenance SLAs covering security patches, performance sweeps, and feature revisions.'
+        "question": "Do you provide maintenance and updates after launch?",
+        "answer": "Yes, we provide post-launch support and continuous maintenance SLAs covering security patches, performance sweeps, and feature revisions."
       }
     ]
   },
   {
-    id: 'portfolio-design',
-    slug: 'portfolio-design',
-    title: 'Personal & Agency Portfolio Design',
-    h1Title: 'High-Impact Portfolio Design & Personal Branding Websites',
-    metaTitle: 'Custom Portfolio Website Design | CodeNPixels',
-    metaDescription: 'Stand out in your industry with a bespoke personal portfolio, creator showcase, or agency showcase website with 3D interactions and fast loading speeds.',
-    description: 'Bespoke portfolio websites with interactive animations, project showcases, and resume integration for professionals and creators.',
-    longDescription: 'A generic template will not win high-value clients or dream roles. We design and build ultra-modern, high-converting portfolio websites featuring smooth micro-animations, interactive project galleries, case study modals, and integrated contact forms that establish your professional authority immediately.',
-    icon: 'Sparkles',
-    startingPriceUsd: '$129',
-    businessProblem: 'Professionals, freelancers, developers, and consultants often use bland PDF resumes or generic portfolio templates that fail to capture employer or client attention.',
-    solution: 'We craft immersive, interactive digital portfolios that highlight your best projects, skill sets, client testimonials, and measurable achievements with 60fps animations.',
-    features: [
-      'Interactive project filtering & case study modal views',
-      'Smooth scroll-triggered micro-interactions & animations',
-      'Downloadable resume & social integration hubs',
-      'Dark/Light theme switching & custom typography',
-      'Mobile-optimized touch carousels & video previews',
-      'Direct lead capture form with instant email alerts'
+    "id": "portfolio-design",
+    "slug": "portfolio-design",
+    "title": "Personal & Agency Portfolio Design",
+    "h1Title": "High-Impact Portfolio Design & Personal Branding Websites",
+    "metaTitle": "Custom Portfolio Website Design | CodeNPixels",
+    "metaDescription": "Stand out in your industry with a bespoke personal portfolio, creator showcase, or agency showcase website with 3D interactions and fast loading speeds.",
+    "description": "Bespoke portfolio websites with interactive animations, project showcases, and resume integration for professionals and creators.",
+    "longDescription": "A generic template will not win high-value clients or dream roles. We design and build ultra-modern, high-converting portfolio websites featuring smooth micro-animations, interactive project galleries, case study modals, and integrated contact forms that establish your professional authority immediately.",
+    "icon": "Sparkles",
+    "startingPriceUsd": "$150",
+    "businessProblem": "Professionals, freelancers, developers, and consultants often use bland PDF resumes or generic portfolio templates that fail to capture employer or client attention.",
+    "solution": "We craft immersive, interactive digital portfolios that highlight your best projects, skill sets, client testimonials, and measurable achievements with 60fps animations.",
+    "features": [
+      "Interactive project filtering & case study modal views",
+      "Smooth scroll-triggered micro-interactions & animations",
+      "Downloadable resume & social integration hubs",
+      "Dark/Light theme switching & custom typography",
+      "Mobile-optimized touch carousels & video previews",
+      "Direct lead capture form with instant email alerts"
     ],
-    technologies: ['React 19', 'Tailwind CSS', 'Framer Motion', 'Vite', 'Responsive UI'],
-    benefits: [
-      'High conversion rate for client inquiries and job offers',
-      'Memorable visual impression that outshines standard templates',
-      '100/100 Google Lighthouse page speed score',
-      'Easily update projects and achievements at any time'
+    "technologies": [
+      "React 19",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vite",
+      "Responsive UI"
     ],
-    faqs: [
+    "benefits": [
+      "High conversion rate for client inquiries and job offers",
+      "Memorable visual impression that outshines standard templates",
+      "100/100 Google Lighthouse page speed score",
+      "Easily update projects and achievements at any time"
+    ],
+    "faqs": [
       {
-        question: 'Can I easily update my projects after the portfolio is launched?',
-        answer: 'Yes! We structure your project data cleanly so you can add new projects, images, and live links effortlessly without breaking layout design.'
+        "question": "Can I easily update my projects after the portfolio is launched?",
+        "answer": "Yes! We structure your project data cleanly so you can add new projects, images, and live links effortlessly without breaking layout design."
       },
       {
-        question: 'How fast can a custom portfolio website be delivered?',
-        answer: 'Standard bespoke portfolio websites are typically delivered within 5 to 7 business days.'
+        "question": "How fast can a custom portfolio website be delivered?",
+        "answer": "Standard bespoke portfolio websites are typically delivered within 5 to 7 business days."
       }
     ]
   },
   {
-    id: 'smart-menu-system',
-    slug: 'smart-menu-system',
-    title: 'Smart QR Menu & Restaurant Systems',
-    h1Title: 'Smart QR Digital Menu & Contactless Restaurant Ordering Systems',
-    metaTitle: 'Smart QR Menu & Restaurant Ordering System | CodeNPixels',
-    metaDescription: 'Boost restaurant table turnover and sales with contactless Smart QR digital menus, live price updates, dish photos, and online ordering.',
-    description: 'Interactive contactless QR menus, digital food catalogs, and instant table ordering platforms for cafes, restaurants, and bars.',
-    longDescription: 'Modernize your dining experience with instant, contactless QR digital menus. Customers scan a table QR code on their smartphone to view high-resolution dish photos, chef specials, dietary filters, and place orders directly without waiting for physical paper menus.',
-    icon: 'Layers',
-    startingPriceUsd: '$199',
-    businessProblem: 'Physical paper menus are expensive to reprint whenever prices or items change, wear out quickly, and cannot showcase dynamic daily specials or dietary filters.',
-    solution: 'We deliver ultra-fast, mobile-friendly QR digital menu systems with instant admin controls to update prices, photos, and item availability in seconds.',
-    features: [
-      'Instant camera QR code table scanning (zero app downloads needed)',
-      'Category filtering (Appetizers, Mains, Drinks, Vegan, Chef Specials)',
-      'High-resolution food photo galleries & ingredient lists',
-      'Live admin panel to update prices, toggle out-of-stock items',
-      'Table-based ordering and WhatsApp/SMS order notifications',
-      'Multi-currency and multi-language support'
+    "id": "smart-menu-system",
+    "slug": "smart-menu-system",
+    "title": "Smart QR Menu & Restaurant Systems",
+    "h1Title": "Smart QR Digital Menu & Contactless Restaurant Ordering Systems",
+    "metaTitle": "Smart QR Menu & Restaurant Ordering System | CodeNPixels",
+    "metaDescription": "Boost restaurant table turnover and sales with contactless Smart QR digital menus, live price updates, dish photos, and online ordering.",
+    "description": "Interactive contactless QR menus, digital food catalogs, and instant table ordering platforms for cafes, restaurants, and bars.",
+    "longDescription": "Modernize your dining experience with instant, contactless QR digital menus. Customers scan a table QR code on their smartphone to view high-resolution dish photos, chef specials, dietary filters, and place orders directly without waiting for physical paper menus.",
+    "icon": "Layers",
+    "startingPriceUsd": "$200",
+    "businessProblem": "Physical paper menus are expensive to reprint whenever prices or items change, wear out quickly, and cannot showcase dynamic daily specials or dietary filters.",
+    "solution": "We deliver ultra-fast, mobile-friendly QR digital menu systems with instant admin controls to update prices, photos, and item availability in seconds.",
+    "features": [
+      "Instant camera QR code table scanning (zero app downloads needed)",
+      "Category filtering (Appetizers, Mains, Drinks, Vegan, Chef Specials)",
+      "High-resolution food photo galleries & ingredient lists",
+      "Live admin panel to update prices, toggle out-of-stock items",
+      "Table-based ordering and WhatsApp/SMS order notifications",
+      "Multi-currency and multi-language support"
     ],
-    technologies: ['React.js', 'QR Code Engine', 'Tailwind CSS', 'Node.js', 'Cloud Storage'],
-    benefits: [
-      'Eliminate printing costs and delays for menu updates',
-      'Up to 25% increase in average order value through visual appetizing photos',
-      'Faster table turnover during peak rush hours',
-      'Modern, sanitary dining experience that delights patrons'
+    "technologies": [
+      "React.js",
+      "QR Code Engine",
+      "Tailwind CSS",
+      "Node.js",
+      "Cloud Storage"
     ],
-    faqs: [
+    "benefits": [
+      "Eliminate printing costs and delays for menu updates",
+      "Up to 25% increase in average order value through visual appetizing photos",
+      "Faster table turnover during peak rush hours",
+      "Modern, sanitary dining experience that delights patrons"
+    ],
+    "faqs": [
       {
-        question: 'Do customers need to download an app to view the menu?',
-        answer: 'No app download is required. Customers simply scan the QR code with their phone camera to instantly view the menu in their web browser.'
+        "question": "Do customers need to download an app to view the menu?",
+        "answer": "No app download is required. Customers simply scan the QR code with their phone camera to instantly view the menu in their web browser."
       },
       {
-        question: 'Can I change prices or mark items as sold out in real-time?',
-        answer: 'Yes, our smart menu includes an intuitive owner dashboard where you can toggle availability and update prices instantly from your phone.'
+        "question": "Can I change prices or mark items as sold out in real-time?",
+        "answer": "Yes, our smart menu includes an intuitive owner dashboard where you can toggle availability and update prices instantly from your phone."
       }
     ]
   },
   {
-    id: 'billing-software',
-    slug: 'billing-software',
-    title: 'Billing & Invoicing Software',
-    h1Title: 'Automated Billing, Invoicing & Multi-Currency Software Solutions',
-    metaTitle: 'Custom Billing & Invoicing Software | CodeNPixels',
-    metaDescription: 'Custom billing software, automated GST/tax invoice generators, recurring subscriptions, and payment receipts tailored for retail and online businesses.',
-    description: 'Automated invoice generation, GST/tax calculations, multi-currency billing, and client payment tracking software.',
-    longDescription: 'Streamline your cash flow with custom-engineered billing and invoicing software. We design lightweight, highly secure billing engines that calculate taxes automatically (GST, VAT, Sales Tax), generate downloadable PDF invoices, track payment status, and send automated receipt reminders.',
-    icon: 'CheckSquare',
-    startingPriceUsd: '$349',
-    businessProblem: 'Manual billing in spreadsheets leads to calculation errors, misplaced tax compliance records, delayed client payments, and administrative burnout.',
-    solution: 'We build tailored billing and invoice management portals that automate calculations, produce branded PDF invoices with one click, and track pending receivables.',
-    features: [
-      'One-click PDF invoice & receipt generation',
-      'Automated Sales Tax, VAT, GST and regional tax rate calculation',
-      'Multi-currency support (USD $, EUR €, GBP £, AUD $, CAD $)',
-      'Customer credit management & payment milestone tracking',
-      'Automated Email & WhatsApp invoice delivery',
-      'Exportable financial telemetry reports (Excel, CSV, JSON)'
+    "id": "billing-software",
+    "slug": "billing-software",
+    "title": "Billing & Invoicing Software",
+    "h1Title": "Automated Billing, Invoicing & Multi-Currency Software Solutions",
+    "metaTitle": "Custom Billing & Invoicing Software | CodeNPixels",
+    "metaDescription": "Custom billing software, automated GST/tax invoice generators, recurring subscriptions, and payment receipts tailored for retail and online businesses.",
+    "description": "Automated invoice generation, GST/tax calculations, multi-currency billing, and client payment tracking software.",
+    "longDescription": "Streamline your cash flow with custom-engineered billing and invoicing software. We design lightweight, highly secure billing engines that calculate taxes automatically (GST, VAT, Sales Tax), generate downloadable PDF invoices, track payment status, and send automated receipt reminders.",
+    "icon": "CheckSquare",
+    "startingPriceUsd": "$400",
+    "businessProblem": "Manual billing in spreadsheets leads to calculation errors, misplaced tax compliance records, delayed client payments, and administrative burnout.",
+    "solution": "We build tailored billing and invoice management portals that automate calculations, produce branded PDF invoices with one click, and track pending receivables.",
+    "features": [
+      "One-click PDF invoice & receipt generation",
+      "Automated Sales Tax, VAT, GST and regional tax rate calculation",
+      "Multi-currency support (USD $, EUR €, GBP £, AUD $, CAD $)",
+      "Customer credit management & payment milestone tracking",
+      "Automated Email & WhatsApp invoice delivery",
+      "Exportable financial telemetry reports (Excel, CSV, JSON)"
     ],
-    technologies: ['React', 'Node.js', 'PDF Generation Engine', 'PostgreSQL', 'Tailwind CSS'],
-    benefits: [
-      'Eliminate invoicing calculation errors and compliance mistakes',
-      'Accelerate receivable payments with automated reminder alerts',
-      'Clean professional brand presentation on every client receipt',
-      'Complete visibility into monthly revenue and tax obligations'
+    "technologies": [
+      "React",
+      "Node.js",
+      "PDF Generation Engine",
+      "PostgreSQL",
+      "Tailwind CSS"
     ],
-    faqs: [
+    "benefits": [
+      "Eliminate invoicing calculation errors and compliance mistakes",
+      "Accelerate receivable payments with automated reminder alerts",
+      "Clean professional brand presentation on every client receipt",
+      "Complete visibility into monthly revenue and tax obligations"
+    ],
+    "faqs": [
       {
-        question: 'Can the billing software generate tax-compliant invoices for international markets (Sales Tax, VAT, GST)?',
-        answer: 'Yes! The software automatically applies regional tax rules (US Sales Tax, UK/EU VAT, Australian GST, Canadian GST/HST) with compliant tax breakdown tables.'
+        "question": "Can the billing software generate tax-compliant invoices for international markets (Sales Tax, VAT, GST)?",
+        "answer": "Yes! The software automatically applies regional tax rules (US Sales Tax, UK/EU VAT, Australian GST, Canadian GST/HST) with compliant tax breakdown tables."
       },
       {
-        question: 'Can it handle international billing with different currencies?',
-        answer: 'Yes, it natively supports USD, EUR, GBP, AUD, and CAD with real-time conversion rates.'
+        "question": "Can it handle international billing with different currencies?",
+        "answer": "Yes, it natively supports USD, EUR, GBP, AUD, and CAD with real-time conversion rates."
       }
     ]
   },
   {
-    id: 'pos-systems',
-    slug: 'pos-systems',
-    title: 'POS (Point of Sale) Software Solutions',
-    h1Title: 'Cloud Point of Sale (POS) Software for Retail & Hospitality',
-    metaTitle: 'Custom POS Software Development | CodeNPixels',
-    metaDescription: 'Fast, touch-screen cloud Point of Sale (POS) software for retail stores, cafes, and service businesses. Barcode scanner & receipt printer compatible.',
-    description: 'Fast, intuitive Point of Sale systems with barcode scanning, instant checkout, thermal receipt printing, and stock tracking.',
-    longDescription: 'Accelerate retail and checkout counters with custom cloud POS software. Designed for touchscreens, tablets, and desktop terminals, our POS software supports barcode scanning, thermal receipt printing, split payments, and real-time inventory deduction with sub-second transaction speeds.',
-    icon: 'Cpu',
-    startingPriceUsd: '$499',
-    businessProblem: 'Clunky, outdated POS systems suffer from slow terminal response times, expensive monthly vendor lock-ins, and fragile hardware compatibility.',
-    solution: 'We construct responsive, web-based POS software that runs on any tablet, iPad, or PC. It supports thermal printers, barcode scanners, cash drawers, and unified inventory tracking.',
-    features: [
-      'Touch-optimized high-speed checkout counter interface',
-      'USB & Bluetooth thermal receipt printer integration (ESC/POS)',
-      'Barcode & QR code scanner reader integration',
-      'Real-time inventory deduction & low-stock warning alerts',
-      'Cash, Card, UPI, and Split-tender payment modes',
-      'Daily sales register summary & cashier shift closing reports'
+    "id": "pos-systems",
+    "slug": "pos-systems",
+    "title": "POS (Point of Sale) Software Solutions",
+    "h1Title": "Cloud Point of Sale (POS) Software for Retail & Hospitality",
+    "metaTitle": "Custom POS Software Development | CodeNPixels",
+    "metaDescription": "Fast, touch-screen cloud Point of Sale (POS) software for retail stores, cafes, and service businesses. Barcode scanner & receipt printer compatible.",
+    "description": "Fast, intuitive Point of Sale systems with barcode scanning, instant checkout, thermal receipt printing, and stock tracking.",
+    "longDescription": "Accelerate retail and checkout counters with custom cloud POS software. Designed for touchscreens, tablets, and desktop terminals, our POS software supports barcode scanning, thermal receipt printing, split payments, and real-time inventory deduction with sub-second transaction speeds.",
+    "icon": "Cpu",
+    "startingPriceUsd": "$400",
+    "businessProblem": "Clunky, outdated POS systems suffer from slow terminal response times, expensive monthly vendor lock-ins, and fragile hardware compatibility.",
+    "solution": "We construct responsive, web-based POS software that runs on any tablet, iPad, or PC. It supports thermal printers, barcode scanners, cash drawers, and unified inventory tracking.",
+    "features": [
+      "Touch-optimized high-speed checkout counter interface",
+      "USB & Bluetooth thermal receipt printer integration (ESC/POS)",
+      "Barcode & QR code scanner reader integration",
+      "Real-time inventory deduction & low-stock warning alerts",
+      "Cash, Card, UPI, and Split-tender payment modes",
+      "Daily sales register summary & cashier shift closing reports"
     ],
-    technologies: ['React', 'Node.js', 'Web Bluetooth/USB API', 'PostgreSQL', 'Tailwind CSS'],
-    benefits: [
-      'Zero expensive hardware lock-in; runs on tablets, PCs, or laptops',
-      'Lightning-fast checkout times reducing counter queues',
-      'Automated stock updates preventing out-of-stock surprises',
-      'Accurate daily shift reconciliation preventing revenue leakage'
+    "technologies": [
+      "React",
+      "Node.js",
+      "Web Bluetooth/USB API",
+      "PostgreSQL",
+      "Tailwind CSS"
     ],
-    faqs: [
+    "benefits": [
+      "Zero expensive hardware lock-in; runs on tablets, PCs, or laptops",
+      "Lightning-fast checkout times reducing counter queues",
+      "Automated stock updates preventing out-of-stock surprises",
+      "Accurate daily shift reconciliation preventing revenue leakage"
+    ],
+    "faqs": [
       {
-        question: 'Will this POS work with standard thermal receipt printers?',
-        answer: 'Yes, our POS works with standard 58mm and 80mm ESC/POS thermal printers via USB, Bluetooth, or network interfaces.'
+        "question": "Will this POS work with standard thermal receipt printers?",
+        "answer": "Yes, our POS works with standard 58mm and 80mm ESC/POS thermal printers via USB, Bluetooth, or network interfaces."
       },
       {
-        question: 'Can it run offline if the internet disconnects temporarily?',
-        answer: 'Yes! We engineer offline-first caching so cashiers can continue billing transactions smoothly and sync to cloud once connection restores.'
+        "question": "Can it run offline if the internet disconnects temporarily?",
+        "answer": "Yes! We engineer offline-first caching so cashiers can continue billing transactions smoothly and sync to cloud once connection restores."
       }
     ]
   },
   {
-    id: 'erp-software',
-    slug: 'erp-software',
-    title: 'Cloud ERP & Business Management',
-    h1Title: 'Custom Cloud ERP Systems & Enterprise Resource Planning',
-    metaTitle: 'Custom Cloud ERP Software Development | CodeNPixels',
-    metaDescription: 'Unify sales, inventory, human resources, accounting, and supply chain with custom cloud ERP software engineered for scaling enterprises.',
-    description: 'Centralized cloud ERP platforms connecting inventory, sales, customer management, employee rosters, and accounting.',
-    longDescription: 'Off-the-shelf ERP platforms are often bloated, overly expensive, and forced around workflows that do not fit your business. We engineer bespoke, modular Cloud ERP systems that precisely align with your operational pipelines—connecting inventory, procurement, customer CRM, vendor billing, and executive analytics under a single unified pane.',
-    icon: 'Database',
-    startingPriceUsd: '$899',
-    businessProblem: 'Disjointed spreadsheets, separate software tools, and lack of real-time operational visibility result in communication silos and revenue loss.',
-    solution: 'We develop modular, role-based cloud ERP software where every department has tailored access, unified reporting, and automated workflow triggers.',
-    features: [
-      'Unified inventory, procurement & warehouse management',
-      'Role-based access control (Admin, Manager, Staff, Accountant)',
-      'Customer Relationship Management (CRM) & lead tracking',
-      'Automated purchase orders & vendor management',
-      'Executive analytics dashboards with real-time KPI graphs',
-      'Automated audit logs and encrypted data backups'
+    "id": "erp-software",
+    "slug": "erp-software",
+    "title": "Cloud ERP & Business Management",
+    "h1Title": "Custom Cloud ERP Systems & Enterprise Resource Planning",
+    "metaTitle": "Custom Cloud ERP Software Development | CodeNPixels",
+    "metaDescription": "Unify sales, inventory, human resources, accounting, and supply chain with custom cloud ERP software engineered for scaling enterprises.",
+    "description": "Centralized cloud ERP platforms connecting inventory, sales, customer management, employee rosters, and accounting.",
+    "longDescription": "Off-the-shelf ERP platforms are often bloated, overly expensive, and forced around workflows that do not fit your business. We engineer bespoke, modular Cloud ERP systems that precisely align with your operational pipelines—connecting inventory, procurement, customer CRM, vendor billing, and executive analytics under a single unified pane.",
+    "icon": "Database",
+    "startingPriceUsd": "$900",
+    "businessProblem": "Disjointed spreadsheets, separate software tools, and lack of real-time operational visibility result in communication silos and revenue loss.",
+    "solution": "We develop modular, role-based cloud ERP software where every department has tailored access, unified reporting, and automated workflow triggers.",
+    "features": [
+      "Unified inventory, procurement & warehouse management",
+      "Role-based access control (Admin, Manager, Staff, Accountant)",
+      "Customer Relationship Management (CRM) & lead tracking",
+      "Automated purchase orders & vendor management",
+      "Executive analytics dashboards with real-time KPI graphs",
+      "Automated audit logs and encrypted data backups"
     ],
-    technologies: ['React 19', 'Next.js', 'Node.js', 'PostgreSQL', 'Docker', 'Redis'],
-    benefits: [
-      'Complete 360-degree operational visibility for executive leadership',
-      'Eliminate duplicate data entry across departments',
-      'Bespoke feature modules built specifically around your company workflows',
-      'Substantial cost savings compared to expensive recurring SaaS ERP licenses'
+    "technologies": [
+      "React 19",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "Redis"
     ],
-    faqs: [
+    "benefits": [
+      "Complete 360-degree operational visibility for executive leadership",
+      "Eliminate duplicate data entry across departments",
+      "Bespoke feature modules built specifically around your company workflows",
+      "Substantial cost savings compared to expensive recurring SaaS ERP licenses"
+    ],
+    "faqs": [
       {
-        question: 'Can we start with basic ERP modules and add more later?',
-        answer: 'Yes, our modular architecture allows you to launch with core modules (e.g. Sales & Inventory) and seamlessly add HR, Accounting, or Supply Chain as you grow.'
+        "question": "Can we start with basic ERP modules and add more later?",
+        "answer": "Yes, our modular architecture allows you to launch with core modules (e.g. Sales & Inventory) and seamlessly add HR, Accounting, or Supply Chain as you grow."
       },
       {
-        question: 'How secure is the company data stored in the ERP?',
-        answer: 'We implement bank-grade encryption at rest and in transit, multi-factor authentication, granular role permissions, and automated daily backups.'
+        "question": "How secure is the company data stored in the ERP?",
+        "answer": "We implement bank-grade encryption at rest and in transit, multi-factor authentication, granular role permissions, and automated daily backups."
       }
     ]
   },
   {
-    id: 'ai-development',
-    slug: 'ai-development',
-    title: 'AI Web Development & Automation',
-    h1Title: 'AI-Powered Web Development & Intelligent Digital Solutions',
-    metaTitle: 'AI Web Development & Automation Services | CodeNPixels',
-    metaDescription: 'AI-powered website development, smart workflow automation, and LLM API integrations designed to modernize your business operations.',
-    description: 'Smart AI integrations, automated workflows, and intelligent web interfaces that modernize business operations.',
-    longDescription: 'We help businesses leverage modern artificial intelligence to deliver personalized web experiences, streamline customer interactions, and automate repetitive workflows. From integrating LLM-powered assistants and intelligent search to automated content pipelines, we engineer practical, reliable AI solutions that drive measurable efficiency.',
-    icon: 'Sparkles',
-    startingPriceUsd: '$399',
-    businessProblem: 'Businesses face rising operational costs and struggle to provide instant 24/7 customer assistance, dynamic content personalization, and automated business workflows.',
-    solution: 'We integrate intelligent AI models (Google Gemini, OpenAI, Claude) and custom automation pipelines directly into your web applications, enabling automated customer triage, dynamic data extraction, and real-time smart interactions.',
-    features: [
-      'Intelligent AI chatbot & customer assistant integration',
-      'Automated workflow & webhook event triggers',
-      'Smart search & vector-based content retrieval',
-      'Generative AI prompt engineering & API pipelines',
-      'Data extraction and automated report generation',
-      'Secure AI API credential handling and rate limiting'
+    "id": "ai-development",
+    "slug": "ai-development",
+    "title": "AI Web Development & Automation",
+    "h1Title": "AI-Powered Web Development & Intelligent Digital Solutions",
+    "metaTitle": "AI Web Development & Automation Services | CodeNPixels",
+    "metaDescription": "AI-powered website development, smart workflow automation, and LLM API integrations designed to modernize your business operations.",
+    "description": "Smart AI integrations, automated workflows, and intelligent web interfaces that modernize business operations.",
+    "longDescription": "We help businesses leverage modern artificial intelligence to deliver personalized web experiences, streamline customer interactions, and automate repetitive workflows. From integrating LLM-powered assistants and intelligent search to automated content pipelines, we engineer practical, reliable AI solutions that drive measurable efficiency.",
+    "icon": "Sparkles",
+    "startingPriceUsd": "$500",
+    "businessProblem": "Businesses face rising operational costs and struggle to provide instant 24/7 customer assistance, dynamic content personalization, and automated business workflows.",
+    "solution": "We integrate intelligent AI models (Google Gemini, OpenAI, Claude) and custom automation pipelines directly into your web applications, enabling automated customer triage, dynamic data extraction, and real-time smart interactions.",
+    "features": [
+      "Intelligent AI chatbot & customer assistant integration",
+      "Automated workflow & webhook event triggers",
+      "Smart search & vector-based content retrieval",
+      "Generative AI prompt engineering & API pipelines",
+      "Data extraction and automated report generation",
+      "Secure AI API credential handling and rate limiting"
     ],
-    technologies: ['Google Gemini API', 'OpenAI API', 'Node.js', 'Python', 'LangChain', 'REST APIs'],
-    benefits: [
-      '24/7 automated user engagement without additional headcount',
-      'Reduced manual overhead through intelligent workflow automation',
-      'Enhanced user experience with instant, contextual responses',
-      'Scalable AI architecture built with enterprise security controls'
+    "technologies": [
+      "Google Gemini API",
+      "OpenAI API",
+      "Node.js",
+      "Python",
+      "LangChain",
+      "REST APIs"
     ],
-    faqs: [
+    "benefits": [
+      "24/7 automated user engagement without additional headcount",
+      "Reduced manual overhead through intelligent workflow automation",
+      "Enhanced user experience with instant, contextual responses",
+      "Scalable AI architecture built with enterprise security controls"
+    ],
+    "faqs": [
       {
-        question: 'What types of AI integrations do you build for websites?',
-        answer: 'We integrate smart customer support chatbots, automated lead qualification systems, AI search bars, document processing pipelines, and personalized recommendation engines.'
+        "question": "What types of AI integrations do you build for websites?",
+        "answer": "We integrate smart customer support chatbots, automated lead qualification systems, AI search bars, document processing pipelines, and personalized recommendation engines."
       },
       {
-        question: 'Is user data kept secure when using AI APIs?',
-        answer: 'Yes. We strictly implement zero-retention API endpoints, environment variable encryption, and role-based access to safeguard your proprietary data.'
+        "question": "Is user data kept secure when using AI APIs?",
+        "answer": "Yes. We strictly implement zero-retention API endpoints, environment variable encryption, and role-based access to safeguard your proprietary data."
       }
     ]
   },
   {
-    id: 'frontend',
-    slug: 'frontend-development',
-    title: 'Frontend Development',
-    h1Title: 'Modern Frontend Engineering with React & Next.js',
-    metaTitle: 'Frontend Development Services | React & Next.js | CodeNPixels',
-    metaDescription: 'Pixel-perfect, accessible, and ultra-fast frontend development using React, Next.js, TypeScript, and modern CSS. Built for peak user engagement.',
-    description: 'Pixel-perfect, hyper-fast, accessible interfaces built on top of modern React and Next.js stacks.',
-    longDescription: 'We specialize in implementing strictly typed, highly scalable, and WCAG-accessible user interfaces. We convert Figma design systems into performant React layouts with ultra-smooth Framer Motion micro-interactions, responsive fluid grids, and optimized bundle sizes that deliver frictionless user experiences.',
-    icon: 'CodeXml',
-    startingPriceUsd: '$249',
-    businessProblem: 'Sluggish UI rendering, layout shift, poor mobile usability, and non-accessible code frustrate users and drive down website conversion rates.',
-    solution: 'We engineer component-driven, responsive frontend architectures with React, TypeScript, and Tailwind CSS. We prioritize sub-100ms interaction response times and 100/100 Lighthouse performance metrics.',
-    features: [
-      'React.js 19 & Next.js production architectures',
-      'Strict TypeScript typing for bug-free codebases',
-      'Fluid responsiveness for all screen resolutions',
-      'Smooth micro-interactions & 60fps animations',
-      'WCAG 2.1 AA accessibility compliance',
-      'Zero layout shifts (CLS < 0.05)'
+    "id": "frontend",
+    "slug": "frontend-development",
+    "title": "Frontend Development",
+    "h1Title": "Modern Frontend Engineering with React & Next.js",
+    "metaTitle": "Frontend Development Services | React & Next.js | CodeNPixels",
+    "metaDescription": "Pixel-perfect, accessible, and ultra-fast frontend development using React, Next.js, TypeScript, and modern CSS. Built for peak user engagement.",
+    "description": "Pixel-perfect, hyper-fast, accessible interfaces built on top of modern React and Next.js stacks.",
+    "longDescription": "We specialize in implementing strictly typed, highly scalable, and WCAG-accessible user interfaces. We convert Figma design systems into performant React layouts with ultra-smooth Framer Motion micro-interactions, responsive fluid grids, and optimized bundle sizes that deliver frictionless user experiences.",
+    "icon": "CodeXml",
+    "startingPriceUsd": "$250",
+    "businessProblem": "Sluggish UI rendering, layout shift, poor mobile usability, and non-accessible code frustrate users and drive down website conversion rates.",
+    "solution": "We engineer component-driven, responsive frontend architectures with React, TypeScript, and Tailwind CSS. We prioritize sub-100ms interaction response times and 100/100 Lighthouse performance metrics.",
+    "features": [
+      "React.js 19 & Next.js production architectures",
+      "Strict TypeScript typing for bug-free codebases",
+      "Fluid responsiveness for all screen resolutions",
+      "Smooth micro-interactions & 60fps animations",
+      "WCAG 2.1 AA accessibility compliance",
+      "Zero layout shifts (CLS < 0.05)"
     ],
-    technologies: ['React 19', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Motion/React', 'Vite'],
-    benefits: [
-      'Instantaneous page transitions and snappy UI responsiveness',
-      'Higher mobile conversion rates with touch-optimized interfaces',
-      'Reusable component libraries that slash future development costs',
-      'Full compliance with web accessibility standards'
+    "technologies": [
+      "React 19",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Motion/React",
+      "Vite"
     ],
-    faqs: [
+    "benefits": [
+      "Instantaneous page transitions and snappy UI responsiveness",
+      "Higher mobile conversion rates with touch-optimized interfaces",
+      "Reusable component libraries that slash future development costs",
+      "Full compliance with web accessibility standards"
+    ],
+    "faqs": [
       {
-        question: 'Do you convert Figma or Adobe XD designs into React code?',
-        answer: 'Yes, we specialize in translating complex Figma, XD, or Sketch designs into pixel-perfect, responsive React and Tailwind CSS components.'
+        "question": "Do you convert Figma or Adobe XD designs into React code?",
+        "answer": "Yes, we specialize in translating complex Figma, XD, or Sketch designs into pixel-perfect, responsive React and Tailwind CSS components."
       }
     ]
   },
   {
-    id: 'backend',
-    slug: 'backend-development',
-    title: 'Backend Development',
-    h1Title: 'Scalable Backend Development & Cloud API Architectures',
-    metaTitle: 'Backend Development Services | Node.js & Databases | CodeNPixels',
-    metaDescription: 'Secure, scalable backend engineering, Node.js server architectures, REST/GraphQL APIs, and resilient database solutions for modern web platforms.',
-    description: 'Secure, scalable backends, database engines, and lightweight microservice routers.',
-    longDescription: 'Power your digital products with enterprise-grade server logic and robust database architectures. We design secure APIs, optimize relational and NoSQL database queries, implement granular JWT/OAuth security access controls, and deploy resilient microservices that process transactions seamlessly under high concurrency.',
-    icon: 'Database',
-    startingPriceUsd: '$349',
-    businessProblem: 'Unreliable backend servers, unoptimized database queries, and security vulnerabilities lead to system downtime, slow response times, and compromised user data.',
-    solution: 'We construct secure, modular backend architectures using Node.js, Express, and structured database engines. We implement comprehensive authentication, database indexing, and high-speed caching for maximum resilience.',
-    features: [
-      'Node.js & Express high-performance server logic',
-      'PostgreSQL, MySQL & MongoDB database design and indexing',
-      'JWT, OAuth 2.0 & secure session authentication',
-      'RESTful & GraphQL API endpoint development',
-      'Redis caching and request rate limiting',
-      'Automated database backups & zero-downtime deployments'
+    "id": "backend",
+    "slug": "backend-development",
+    "title": "Backend Development",
+    "h1Title": "Scalable Backend Development & Cloud API Architectures",
+    "metaTitle": "Backend Development Services | Node.js & Databases | CodeNPixels",
+    "metaDescription": "Secure, scalable backend engineering, Node.js server architectures, REST/GraphQL APIs, and resilient database solutions for modern web platforms.",
+    "description": "Secure, scalable backends, database engines, and lightweight microservice routers.",
+    "longDescription": "Power your digital products with enterprise-grade server logic and robust database architectures. We design secure APIs, optimize relational and NoSQL database queries, implement granular JWT/OAuth security access controls, and deploy resilient microservices that process transactions seamlessly under high concurrency.",
+    "icon": "Database",
+    "startingPriceUsd": "$300",
+    "businessProblem": "Unreliable backend servers, unoptimized database queries, and security vulnerabilities lead to system downtime, slow response times, and compromised user data.",
+    "solution": "We construct secure, modular backend architectures using Node.js, Express, and structured database engines. We implement comprehensive authentication, database indexing, and high-speed caching for maximum resilience.",
+    "features": [
+      "Node.js & Express high-performance server logic",
+      "PostgreSQL, MySQL & MongoDB database design and indexing",
+      "JWT, OAuth 2.0 & secure session authentication",
+      "RESTful & GraphQL API endpoint development",
+      "Redis caching and request rate limiting",
+      "Automated database backups & zero-downtime deployments"
     ],
-    technologies: ['Node.js', 'Express.js', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker'],
-    benefits: [
-      '99.9% operational uptime with fault-tolerant server design',
-      'Sub-millisecond query execution with optimized database schemas',
-      'Bank-grade authentication and strict data security protocols',
-      'Effortless scalability as your user base and traffic grow'
+    "technologies": [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Docker"
     ],
-    faqs: [
+    "benefits": [
+      "99.9% operational uptime with fault-tolerant server design",
+      "Sub-millisecond query execution with optimized database schemas",
+      "Bank-grade authentication and strict data security protocols",
+      "Effortless scalability as your user base and traffic grow"
+    ],
+    "faqs": [
       {
-        question: 'Which databases do you recommend for web applications?',
-        answer: 'We evaluate your data structure: PostgreSQL for relational, transactional, and ACID-compliant systems; MongoDB for flexible JSON document storage; and Redis for ultra-fast caching.'
+        "question": "Which databases do you recommend for web applications?",
+        "answer": "We evaluate your data structure: PostgreSQL for relational, transactional, and ACID-compliant systems; MongoDB for flexible JSON document storage; and Redis for ultra-fast caching."
       }
     ]
   },
   {
-    id: 'fullstack',
-    slug: 'fullstack-development',
-    title: 'Full Stack Development',
-    h1Title: 'End-to-End Full Stack Web Application Development',
-    metaTitle: 'Full Stack Web Development Company | CodeNPixels',
-    metaDescription: 'Complete full stack web application development from concept to cloud deployment. Seamless frontend UI, scalable backend, and secure database systems.',
-    description: 'Comprehensive, end-to-end full stack web platforms engineered for business growth.',
-    longDescription: 'From client-side visual modules to server-side databases and cloud deployments, we build complete full-stack ecosystems. We establish robust dev-to-production pipelines, automated testing rigs, and intuitive dashboard consoles that give your team absolute control over business metrics and customer data.',
-    icon: 'Layers',
-    startingPriceUsd: '$549',
-    businessProblem: 'Managing multiple disjointed vendors for frontend, backend, and cloud hosting results in communication bottlenecks, architectural mismatches, and delayed launches.',
-    solution: 'We provide unified, single-team full-stack engineering. We build cohesive architectures where frontend interfaces, backend APIs, and database layers work together in perfect harmony.',
-    features: [
-      'Complete end-to-end web application architectures',
-      'Custom admin dashboards & business management consoles',
-      'Real-time database synchronization & WebSockets',
-      'Automated CI/CD deployment pipelines',
-      'Third-party payment gateway and SaaS integrations',
-      'Comprehensive integration and automated testing'
+    "id": "fullstack",
+    "slug": "fullstack-development",
+    "title": "Full Stack Development",
+    "h1Title": "End-to-End Full Stack Web Application Development",
+    "metaTitle": "Full Stack Web Development Company | CodeNPixels",
+    "metaDescription": "Complete full stack web application development from concept to cloud deployment. Seamless frontend UI, scalable backend, and secure database systems.",
+    "description": "Comprehensive, end-to-end full stack web platforms engineered for business growth.",
+    "longDescription": "From client-side visual modules to server-side databases and cloud deployments, we build complete full-stack ecosystems. We establish robust dev-to-production pipelines, automated testing rigs, and intuitive dashboard consoles that give your team absolute control over business metrics and customer data.",
+    "icon": "Layers",
+    "startingPriceUsd": "$800",
+    "businessProblem": "Managing multiple disjointed vendors for frontend, backend, and cloud hosting results in communication bottlenecks, architectural mismatches, and delayed launches.",
+    "solution": "We provide unified, single-team full-stack engineering. We build cohesive architectures where frontend interfaces, backend APIs, and database layers work together in perfect harmony.",
+    "features": [
+      "Complete end-to-end web application architectures",
+      "Custom admin dashboards & business management consoles",
+      "Real-time database synchronization & WebSockets",
+      "Automated CI/CD deployment pipelines",
+      "Third-party payment gateway and SaaS integrations",
+      "Comprehensive integration and automated testing"
     ],
-    technologies: ['React.js', 'Node.js', 'Next.js', 'PostgreSQL', 'Express', 'Tailwind CSS', 'Docker'],
-    benefits: [
-      'Single point of accountability for your entire tech stack',
-      'Accelerated time-to-market with streamlined full-stack workflows',
-      'Consistent design system and data modeling across all tiers',
-      'Reduced overall engineering and maintenance overhead'
+    "technologies": [
+      "React.js",
+      "Node.js",
+      "Next.js",
+      "PostgreSQL",
+      "Express",
+      "Tailwind CSS",
+      "Docker"
     ],
-    faqs: [
+    "benefits": [
+      "Single point of accountability for your entire tech stack",
+      "Accelerated time-to-market with streamlined full-stack workflows",
+      "Consistent design system and data modeling across all tiers",
+      "Reduced overall engineering and maintenance overhead"
+    ],
+    "faqs": [
       {
-        question: 'Can you build custom administrative dashboards and CRM tools?',
-        answer: 'Yes. We specialize in building secure, data-rich admin consoles with real-time analytics, user role management, and exportable reports.'
+        "question": "Can you build custom administrative dashboards and CRM tools?",
+        "answer": "Yes. We specialize in building secure, data-rich admin consoles with real-time analytics, user role management, and exportable reports."
       }
     ]
   },
   {
-    id: 'ui-ux',
-    slug: 'ui-ux-design',
-    title: 'UI/UX Design Systems',
-    h1Title: 'High-Converting UI/UX Design & User Experience Systems',
-    metaTitle: 'UI/UX Design Company | Modern User Experience Design | CodeNPixels',
-    metaDescription: 'Intuitive UI/UX design, interactive Figma prototypes, and design systems focused on user journey mapping, visual hierarchy, and high conversion rates.',
-    description: 'Intuitive user experiences focused on user journey mapping, interaction, and aesthetics.',
-    longDescription: 'Great digital products start with understanding user behavior. We diagram detailed user empathy maps, interactive wireframes, and sequential interaction flows to eliminate user friction. We design modern screens that make complex, data-heavy operations feel effortless, intuitive, and delightful.',
-    icon: 'Sparkles',
-    startingPriceUsd: '$169',
-    businessProblem: 'Confusing user interfaces and high-friction checkout or onboarding flows cause user drop-off, increased support tickets, and lost revenue.',
-    solution: 'We perform user journey research, wireframing, and usability testing to craft clean, visually striking design systems in Figma that guide visitors naturally toward key conversion goals.',
-    features: [
-      'In-depth user research & empathy journey mapping',
-      'Low-fidelity wireframing to test information hierarchy',
-      'High-fidelity interactive prototypes in Figma',
-      'Comprehensive design systems with tokens & typography pairing',
-      'Usability testing & feedback iteration cycles',
-      'Seamless developer handoff with complete asset specifications'
+    "id": "ui-ux",
+    "slug": "ui-ux-design",
+    "title": "UI/UX Design Systems",
+    "h1Title": "High-Converting UI/UX Design & User Experience Systems",
+    "metaTitle": "UI/UX Design Company | Modern User Experience Design | CodeNPixels",
+    "metaDescription": "Intuitive UI/UX design, interactive Figma prototypes, and design systems focused on user journey mapping, visual hierarchy, and high conversion rates.",
+    "description": "Intuitive user experiences focused on user journey mapping, interaction, and aesthetics.",
+    "longDescription": "Great digital products start with understanding user behavior. We diagram detailed user empathy maps, interactive wireframes, and sequential interaction flows to eliminate user friction. We design modern screens that make complex, data-heavy operations feel effortless, intuitive, and delightful.",
+    "icon": "Sparkles",
+    "startingPriceUsd": "$200",
+    "businessProblem": "Confusing user interfaces and high-friction checkout or onboarding flows cause user drop-off, increased support tickets, and lost revenue.",
+    "solution": "We perform user journey research, wireframing, and usability testing to craft clean, visually striking design systems in Figma that guide visitors naturally toward key conversion goals.",
+    "features": [
+      "In-depth user research & empathy journey mapping",
+      "Low-fidelity wireframing to test information hierarchy",
+      "High-fidelity interactive prototypes in Figma",
+      "Comprehensive design systems with tokens & typography pairing",
+      "Usability testing & feedback iteration cycles",
+      "Seamless developer handoff with complete asset specifications"
     ],
-    technologies: ['Figma', 'Design Systems', 'Prototyping', 'Responsive Grids', 'Design Tokens'],
-    benefits: [
-      'Increased conversion rates through friction-free user flows',
-      'Elevated brand perception with sleek, modern visual aesthetics',
-      'Accelerated development speed via standardized UI component libraries',
-      'Reduced user onboarding friction and customer churn'
+    "technologies": [
+      "Figma",
+      "Design Systems",
+      "Prototyping",
+      "Responsive Grids",
+      "Design Tokens"
     ],
-    faqs: [
+    "benefits": [
+      "Increased conversion rates through friction-free user flows",
+      "Elevated brand perception with sleek, modern visual aesthetics",
+      "Accelerated development speed via standardized UI component libraries",
+      "Reduced user onboarding friction and customer churn"
+    ],
+    "faqs": [
       {
-        question: 'Do you provide interactive Figma prototypes before writing code?',
-        answer: 'Yes! We create clickable, interactive Figma prototypes so you can experience and test the exact user flows before any code is written.'
+        "question": "Do you provide interactive Figma prototypes before writing code?",
+        "answer": "Yes! We create clickable, interactive Figma prototypes so you can experience and test the exact user flows before any code is written."
       }
     ]
   },
   {
-    id: 'api-dev',
-    slug: 'api-development',
-    title: 'API Development & Integration',
-    h1Title: 'REST & GraphQL API Development and System Integration',
-    metaTitle: 'API Development & Integration Services | CodeNPixels',
-    metaDescription: 'Custom RESTful and GraphQL API development, third-party payment gateways, CRM integrations, and secure webhook event pipelines for web applications.',
-    description: 'Connect third-party platforms, automate tasks, or build high-concurrency API integrations.',
-    longDescription: 'Connect existing business tools or build custom API gateways. We create robust REST and GraphQL endpoints that facilitate secure, high-speed data exchange. We integrate payment processors (Stripe, Razorpay), CRMs (HubSpot, Salesforce), email automation engines, and custom analytics telemetry to unify your operations.',
-    icon: 'Webhook',
-    startingPriceUsd: '$249',
-    businessProblem: 'Disconnected software tools, manual data re-entry, and fragile custom scripts create operational bottlenecks and data synchronization errors.',
-    solution: 'We develop robust, documented API pipelines and webhook listeners that synchronize data across your business applications automatically and securely in real time.',
-    features: [
-      'Custom RESTful & GraphQL endpoint architecture',
-      'Payment gateway integrations (Stripe, Razorpay, PayPal)',
-      'CRM, ERP & email marketing data pipelines',
-      'Real-time webhook triggers & event-driven architecture',
-      'API rate-limiting, CORS & token authentication',
-      'OpenAPI/Swagger documentation for easy team onboarding'
+    "id": "api-dev",
+    "slug": "api-development",
+    "title": "API Development & Integration",
+    "h1Title": "REST & GraphQL API Development and System Integration",
+    "metaTitle": "API Development & Integration Services | CodeNPixels",
+    "metaDescription": "Custom RESTful and GraphQL API development, third-party payment gateways, CRM integrations, and secure webhook event pipelines for web applications.",
+    "description": "Connect third-party platforms, automate tasks, or build high-concurrency API integrations.",
+    "longDescription": "Connect existing business tools or build custom API gateways. We create robust REST and GraphQL endpoints that facilitate secure, high-speed data exchange. We integrate payment processors (Stripe, Razorpay), CRMs (HubSpot, Salesforce), email automation engines, and custom analytics telemetry to unify your operations.",
+    "icon": "Webhook",
+    "startingPriceUsd": "$250",
+    "businessProblem": "Disconnected software tools, manual data re-entry, and fragile custom scripts create operational bottlenecks and data synchronization errors.",
+    "solution": "We develop robust, documented API pipelines and webhook listeners that synchronize data across your business applications automatically and securely in real time.",
+    "features": [
+      "Custom RESTful & GraphQL endpoint architecture",
+      "Payment gateway integrations (Stripe, Razorpay, PayPal)",
+      "CRM, ERP & email marketing data pipelines",
+      "Real-time webhook triggers & event-driven architecture",
+      "API rate-limiting, CORS & token authentication",
+      "OpenAPI/Swagger documentation for easy team onboarding"
     ],
-    technologies: ['REST APIs', 'GraphQL', 'Node.js', 'Stripe API', 'Razorpay', 'Webhooks'],
-    benefits: [
-      'Automated synchronization across disparate business applications',
-      'Secure, PCI-compliant payment transaction processing',
-      'Reduced manual administrative hours through automated data flow',
-      'Comprehensive API documentation for effortless future extensions'
+    "technologies": [
+      "REST APIs",
+      "GraphQL",
+      "Node.js",
+      "Stripe API",
+      "Razorpay",
+      "Webhooks"
     ],
-    faqs: [
+    "benefits": [
+      "Automated synchronization across disparate business applications",
+      "Secure, PCI-compliant payment transaction processing",
+      "Reduced manual administrative hours through automated data flow",
+      "Comprehensive API documentation for effortless future extensions"
+    ],
+    "faqs": [
       {
-        question: 'Can you integrate payment gateways like Stripe or Razorpay?',
-        answer: 'Yes. We implement secure checkout sessions, webhook handlers, subscription billing, and automated invoice delivery.'
+        "question": "Can you integrate payment gateways like Stripe or Razorpay?",
+        "answer": "Yes. We implement secure checkout sessions, webhook handlers, subscription billing, and automated invoice delivery."
       }
     ]
   },
   {
-    id: 'maintenance',
-    slug: 'website-maintenance',
-    title: 'Website Optimization & Maintenance',
-    h1Title: 'Website Optimization, Core Web Vitals & Maintenance Services',
-    metaTitle: 'Website Optimization & Maintenance Services | CodeNPixels',
-    metaDescription: 'Keep your website secure, fast, and up to date with 24/7 uptime monitoring, Core Web Vitals tuning, security patching, and technical SEO sweeps.',
-    description: 'Keeping websites secure, updated, and running at maximum performance around the clock.',
-    longDescription: 'High-performing websites need proactive maintenance. We provide continuous infrastructure monitoring, asset caching, security patching, dependency upgrades, and Core Web Vitals optimization to keep your Lighthouse performance scores in the green, protecting search rankings and customer trust.',
-    icon: 'Cpu',
-    startingPriceUsd: '$79/mo',
-    businessProblem: 'Neglected websites suffer from degrading page speeds, broken plugins, security exploits, and sudden Google ranking drops due to poor Core Web Vitals.',
-    solution: 'We provide structured monthly maintenance SLAs that include active speed optimization, dependency patching, automated cloud backups, and uptime monitoring.',
-    features: [
-      'Google Core Web Vitals speed audits & asset tuning',
-      'Continuous security vulnerability patching',
-      'Automated cloud backups & disaster recovery protocols',
-      '24/7 uptime & server health monitoring',
-      'Framework & dependency updates with regression testing',
-      'Monthly technical SEO performance and analytics reports'
+    "id": "maintenance",
+    "slug": "website-maintenance",
+    "title": "Website Optimization & Maintenance",
+    "h1Title": "Website Optimization, Core Web Vitals & Maintenance Services",
+    "metaTitle": "Website Optimization & Maintenance Services | CodeNPixels",
+    "metaDescription": "Keep your website secure, fast, and up to date with 24/7 uptime monitoring, Core Web Vitals tuning, security patching, and technical SEO sweeps.",
+    "description": "Keeping websites secure, updated, and running at maximum performance around the clock.",
+    "longDescription": "High-performing websites need proactive maintenance. We provide continuous infrastructure monitoring, asset caching, security patching, dependency upgrades, and Core Web Vitals optimization to keep your Lighthouse performance scores in the green, protecting search rankings and customer trust.",
+    "icon": "Cpu",
+    "startingPriceUsd": "$50/mo",
+    "businessProblem": "Neglected websites suffer from degrading page speeds, broken plugins, security exploits, and sudden Google ranking drops due to poor Core Web Vitals.",
+    "solution": "We provide structured monthly maintenance SLAs that include active speed optimization, dependency patching, automated cloud backups, and uptime monitoring.",
+    "features": [
+      "Google Core Web Vitals speed audits & asset tuning",
+      "Continuous security vulnerability patching",
+      "Automated cloud backups & disaster recovery protocols",
+      "24/7 uptime & server health monitoring",
+      "Framework & dependency updates with regression testing",
+      "Monthly technical SEO performance and analytics reports"
     ],
-    technologies: ['Google Lighthouse', 'Core Web Vitals', 'Cloudflare', 'SSL/TLS', 'Performance Profiling'],
-    benefits: [
-      'Maintained top search engine rankings through optimal page speeds',
-      'Protection against malicious security vulnerabilities and downtime',
-      'Continuous peace of mind with verified offsite backups',
-      'Dedicated developer response time for urgent website updates'
+    "technologies": [
+      "Google Lighthouse",
+      "Core Web Vitals",
+      "Cloudflare",
+      "SSL/TLS",
+      "Performance Profiling"
     ],
-    faqs: [
+    "benefits": [
+      "Maintained top search engine rankings through optimal page speeds",
+      "Protection against malicious security vulnerabilities and downtime",
+      "Continuous peace of mind with verified offsite backups",
+      "Dedicated developer response time for urgent website updates"
+    ],
+    "faqs": [
       {
-        question: 'How often do you perform security and maintenance checks?',
-        answer: 'We run automated 24/7 uptime monitors, conduct weekly dependency and security audits, and perform deep monthly Core Web Vitals speed tuning.'
+        "question": "How often do you perform security and maintenance checks?",
+        "answer": "We run automated 24/7 uptime monitors, conduct weekly dependency and security audits, and perform deep monthly Core Web Vitals speed tuning."
       }
     ]
   }
@@ -492,346 +578,376 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
-    id: 'luxury-lens-studio',
-    slug: 'luxury-lens-studio',
-    name: 'Luxury Lens Studio (Lumière)',
-    category: 'Frontend',
-    type: 'Luxury Photography & Cinematography Showcase',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Radix UI', 'TypeScript', 'GitHub Pages'],
-    description:
-      'An editorial luxury destination wedding photography and cinematography portfolio with noir-gold aesthetic, awards gallery, and consultation booking.',
-    longDescription:
-      'Lumière Luxury Lens Studio is a world-class editorial photography and cinematography showcase platform engineered for luxury destination weddings across Paris, Lake Como, Udaipur, and Bali. Designed with a bespoke noir-and-champagne gold aesthetic, it features 60fps Framer Motion transitions, full-bleed film reels, client story showcases, and an interactive consultation booking interface.',
-    image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=85&w=1200',
-    client: 'Lumière Studio',
-    featured: true,
-    liveUrl: 'https://chintusa.github.io/Luxury-Lens-Studio/'
+    "id": "luxury-lens-studio",
+    "slug": "luxury-lens-studio",
+    "name": "Luxury Lens Studio (Lumière)",
+    "category": "Frontend",
+    "type": "Luxury Photography & Cinematography Showcase",
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Radix UI",
+      "TypeScript",
+      "GitHub Pages"
+    ],
+    "description": "An editorial luxury destination wedding photography and cinematography portfolio with noir-gold aesthetic, awards gallery, and consultation booking.",
+    "longDescription": "Lumière Luxury Lens Studio is a world-class editorial photography and cinematography showcase platform engineered for luxury destination weddings across Paris, Lake Como, Udaipur, and Bali. Designed with a bespoke noir-and-champagne gold aesthetic, it features 60fps Framer Motion transitions, full-bleed film reels, client story showcases, and an interactive consultation booking interface.",
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=85&w=1200",
+    "client": "Lumière Studio",
+    "featured": true,
+    "liveUrl": "https://chintusa.github.io/Luxury-Lens-Studio/"
   },
   {
-    id: 'odisha-cover-studio',
-    slug: 'odisha-cover-studio',
-    name: 'Odisha Cover Studio',
-    category: 'E-Commerce',
-    type: 'Cultural E-Commerce & Custom Device Studio',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'GitHub Pages', 'WhatsApp API'],
-    description:
-      'A specialized cultural lifestyle e-commerce and device lamination studio showcasing Sambalpuri Ikat cases, Jagannath art covers, and wholesale ordering.',
-    longDescription:
-      'Odisha Cover Studio is an authentic lifestyle and mobile accessories digital platform celebrating Odishan culture and heritage. It features high-resolution Sambalpuri, Jagannath, and tribal artwork collections, an interactive custom printing inquiry flow, mobile back lamination appointment booking, and a dedicated wholesale partner program with 1-click WhatsApp checkout.',
-    image:
-      'https://images.unsplash.com/photo-1598414726047-c0af34b33ab0?w=1000&auto=format&fit=crop&q=80',
-    client: 'Odisha Cover Studio',
-    featured: true,
-    liveUrl: 'https://chintusa.github.io/Odisha-Cover-Studio/'
+    "id": "odisha-cover-studio",
+    "slug": "odisha-cover-studio",
+    "name": "Odisha Cover Studio",
+    "category": "E-Commerce",
+    "type": "Cultural E-Commerce & Custom Device Studio",
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "TypeScript",
+      "GitHub Pages",
+      "WhatsApp API"
+    ],
+    "description": "A specialized cultural lifestyle e-commerce and device lamination studio showcasing Sambalpuri Ikat cases, Jagannath art covers, and wholesale ordering.",
+    "longDescription": "Odisha Cover Studio is an authentic lifestyle and mobile accessories digital platform celebrating Odishan culture and heritage. It features high-resolution Sambalpuri, Jagannath, and tribal artwork collections, an interactive custom printing inquiry flow, mobile back lamination appointment booking, and a dedicated wholesale partner program with 1-click WhatsApp checkout.",
+    "image": "https://images.unsplash.com/photo-1598414726047-c0af34b33ab0?w=1000&auto=format&fit=crop&q=80",
+    "client": "Odisha Cover Studio",
+    "featured": true,
+    "liveUrl": "https://chintusa.github.io/Odisha-Cover-Studio/"
   },
   {
-    id: 'luxury-hospitality',
-    slug: 'luxury-hospitality',
-    name: 'AURA Sanctuary & Private Residences',
-    category: 'Full Stack',
-    type: 'Ultra-Luxury Hospitality & Villa Booking Platform',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'GitHub Pages'],
-    description:
-      'An ultra-luxury hospitality destination web app featuring cliffside private villa showcases, Michelin-starred gastronomy menus, and suite inquiries.',
-    longDescription:
-      'AURA Sanctuary & Private Residences is a flagship ultra-luxury hospitality web platform designed for discerning global travelers. Features interactive cliffside villa tours, curated seasonal experience itineraries, holistic spa wellness booking, Michelin-starred fine dining menus, and an automated private concierge inquiry channel.',
-    image:
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1000&auto=format&fit=crop&q=80',
-    client: 'AURA Hospitality Group',
-    featured: true,
-    liveUrl: 'https://chintusa.github.io/luxury-hospitality/'
+    "id": "luxury-hospitality",
+    "slug": "luxury-hospitality",
+    "name": "AURA Sanctuary & Private Residences",
+    "category": "Full Stack",
+    "type": "Ultra-Luxury Hospitality & Villa Booking Platform",
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "TypeScript",
+      "GitHub Pages"
+    ],
+    "description": "An ultra-luxury hospitality destination web app featuring cliffside private villa showcases, Michelin-starred gastronomy menus, and suite inquiries.",
+    "longDescription": "AURA Sanctuary & Private Residences is a flagship ultra-luxury hospitality web platform designed for discerning global travelers. Features interactive cliffside villa tours, curated seasonal experience itineraries, holistic spa wellness booking, Michelin-starred fine dining menus, and an automated private concierge inquiry channel.",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1000&auto=format&fit=crop&q=80",
+    "client": "AURA Hospitality Group",
+    "featured": true,
+    "liveUrl": "https://chintusa.github.io/luxury-hospitality/"
   },
   {
-    id: 'samaleswari-bastralay-billing',
-    slug: 'samaleswari-bastralay-billing',
-    name: 'Samaleswari Bastralay Smart Bill',
-    category: 'Full Stack',
-    type: 'Retail POS & Offline GST Billing Software',
-    technologies: ['React', 'Tailwind CSS', 'Offline-First', 'PDF Generator', 'WhatsApp API', 'Netlify'],
-    description:
-      'A lightning-fast, offline-capable retail point-of-sale system with automated GST calculations, thermal print receipts, and WhatsApp invoice dispatch.',
-    longDescription:
-      'Smart Bill is a robust, offline-first enterprise retail billing and POS system developed for busy retail and garment stores. Built by CodeNPixels, it features instant barcode/item entry, automated multi-rate GST tax compliance, keyboard-driven express checkout (F2/Ctrl+P), instant thermal printer output, PDF generation, and direct 1-tap WhatsApp invoice delivery.',
-    image:
-      'https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1000&auto=format&fit=crop&q=80',
-    client: 'Samaleswari Bastralay',
-    featured: true,
-    liveUrl: 'https://samaleswari-bastralay-billing.netlify.app/'
+    "id": "samaleswari-bastralay-billing",
+    "slug": "samaleswari-bastralay-billing",
+    "name": "Samaleswari Bastralay Smart Bill",
+    "category": "Full Stack",
+    "type": "Retail POS & Offline GST Billing Software",
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "Offline-First",
+      "PDF Generator",
+      "WhatsApp API",
+      "Netlify"
+    ],
+    "description": "A lightning-fast, offline-capable retail point-of-sale system with automated GST calculations, thermal print receipts, and WhatsApp invoice dispatch.",
+    "longDescription": "Smart Bill is a robust, offline-first enterprise retail billing and POS system developed for busy retail and garment stores. Built by CodeNPixels, it features instant barcode/item entry, automated multi-rate GST tax compliance, keyboard-driven express checkout (F2/Ctrl+P), instant thermal printer output, PDF generation, and direct 1-tap WhatsApp invoice delivery.",
+    "image": "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1000&auto=format&fit=crop&q=80",
+    "client": "Samaleswari Bastralay",
+    "featured": true,
+    "liveUrl": "https://samaleswari-bastralay-billing.netlify.app/"
   },
   {
-    id: 'harry-visuals',
-    slug: 'harry-visuals',
-    name: 'Harry Visuals (Actor & Model Portfolio)',
-    category: 'Frontend',
-    type: 'Celebrity Actor & Fitness Model Showcase Platform',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'YouTube API', 'Netlify'],
-    description:
-      'A high-octane personal branding platform for Sambalpuri film star Harry (250M+ views, 147K+ fans) with editorial galleries and casting inquiries.',
-    longDescription:
-      'Harry Visuals is a high-impact personal media portfolio engineered by CodeNPixels for leading Sambalpuri actor, dancer, and fitness influencer Harry. It features categorized editorial galleries (Fashion, Fitness, Expressions, Calisthenics), integrated high-stream YouTube music video showcases with real-time analytics, and an integrated booking and commercial representation desk.',
-    image:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1000&auto=format&fit=crop&q=80',
-    client: 'Harry Official',
-    featured: true,
-    liveUrl: 'https://harry-visuals.netlify.app/'
+    "id": "harry-visuals",
+    "slug": "harry-visuals",
+    "name": "Harry Visuals (Actor & Model Portfolio)",
+    "category": "Frontend",
+    "type": "Celebrity Actor & Fitness Model Showcase Platform",
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "YouTube API",
+      "Netlify"
+    ],
+    "description": "A high-octane personal branding platform for Sambalpuri film star Harry (250M+ views, 147K+ fans) with editorial galleries and casting inquiries.",
+    "longDescription": "Harry Visuals is a high-impact personal media portfolio engineered by CodeNPixels for leading Sambalpuri actor, dancer, and fitness influencer Harry. It features categorized editorial galleries (Fashion, Fitness, Expressions, Calisthenics), integrated high-stream YouTube music video showcases with real-time analytics, and an integrated booking and commercial representation desk.",
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1000&auto=format&fit=crop&q=80",
+    "client": "Harry Official",
+    "featured": true,
+    "liveUrl": "https://harry-visuals.netlify.app/"
   },
   {
-    id: 'alambana',
-    slug: 'alambana',
-    name: 'Alambana Home Services Platform',
-    category: 'Full Stack',
-    type: 'On-Demand Local Services & Gig Worker Marketplace',
-    technologies: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'REST API', 'Netlify'],
-    description:
-      'A multi-service on-demand marketplace connecting households with verified local service professionals (tutors, plumbers, yoga, car care).',
-    longDescription:
-      'Alambana is a community-focused gig economy and household services marketplace platform. It allows users to quickly search, hire, and schedule trusted local professionals for home tutoring, plumbing, car washing, yoga instruction, and housekeeping, supported by dedicated dual registration portals for customers and gig workers.',
-    image:
-      'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1000&auto=format&fit=crop&q=80',
-    client: 'Alambana Services',
-    featured: true,
-    liveUrl: 'https://alambana.netlify.app/'
+    "id": "alambana",
+    "slug": "alambana",
+    "name": "Alambana Home Services Platform",
+    "category": "Full Stack",
+    "type": "On-Demand Local Services & Gig Worker Marketplace",
+    "technologies": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Bootstrap",
+      "REST API",
+      "Netlify"
+    ],
+    "description": "A multi-service on-demand marketplace connecting households with verified local service professionals (tutors, plumbers, yoga, car care).",
+    "longDescription": "Alambana is a community-focused gig economy and household services marketplace platform. It allows users to quickly search, hire, and schedule trusted local professionals for home tutoring, plumbing, car washing, yoga instruction, and housekeeping, supported by dedicated dual registration portals for customers and gig workers.",
+    "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1000&auto=format&fit=crop&q=80",
+    "client": "Alambana Services",
+    "featured": true,
+    "liveUrl": "https://alambana.netlify.app/"
   },
   {
-    id: 'twogoco-clone',
-    slug: 'twogoco-clone',
-    name: 'TwoGoCo Travel Portal',
-    category: 'Frontend',
-    type: 'Travel Booking Platform Interface',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'Responsive Design', 'Vercel'],
-    description:
-      'A responsive travel-style booking platform interface with clean visual sections, smooth navigation, and optimized UI performance.',
-    longDescription:
-      'TwoGoCo Clone is a modern travel and booking interface designed for seamless holiday and tour package exploration. It features responsive layouts, clean visual hierarchy, smooth navigation, and professional section-based design with zero layout shift.',
-    image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-    client: 'Showcase Project',
-    featured: false,
-    liveUrl:
-      'https://twogoco-clone-nohjy699e-prangyanjali-mehers-projects.vercel.app/'
+    "id": "twogoco-clone",
+    "slug": "twogoco-clone",
+    "name": "TwoGoCo Travel Portal",
+    "category": "Frontend",
+    "type": "Travel Booking Platform Interface",
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Vercel"
+    ],
+    "description": "A responsive travel-style booking platform interface with clean visual sections, smooth navigation, and optimized UI performance.",
+    "longDescription": "TwoGoCo Clone is a modern travel and booking interface designed for seamless holiday and tour package exploration. It features responsive layouts, clean visual hierarchy, smooth navigation, and professional section-based design with zero layout shift.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "client": "Showcase Project",
+    "featured": false,
+    "liveUrl": "https://twogoco-clone-nohjy699e-prangyanjali-mehers-projects.vercel.app/"
   },
   {
-    id: 'mocktail-bar',
-    slug: 'mocktail-bar',
-    name: 'Artisan Mocktail & Bistro Bar',
-    category: 'Frontend',
-    type: 'Food & Beverage Brand Website',
-    technologies: ['React', 'Tailwind CSS', 'Responsive Design', 'Vercel'],
-    description:
-      'A beverage brand website with interactive drink menus, promotional carousels, and location-based customer reservations.',
-    longDescription:
-      'Artisan Mocktail Bar is a food and beverage website designed for a luxury refreshment brand. Includes fluid animations, menu carousels, customer review highlights, and an online table reservation module.',
-    image:
-      'https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=800&q=80',
-    client: 'Mocktail Bar',
-    featured: false,
-    liveUrl: 'https://mocktailbar-beta.vercel.app/'
+    "id": "mocktail-bar",
+    "slug": "mocktail-bar",
+    "name": "Artisan Mocktail & Bistro Bar",
+    "category": "Frontend",
+    "type": "Food & Beverage Brand Website",
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Vercel"
+    ],
+    "description": "A beverage brand website with interactive drink menus, promotional carousels, and location-based customer reservations.",
+    "longDescription": "Artisan Mocktail Bar is a food and beverage website designed for a luxury refreshment brand. Includes fluid animations, menu carousels, customer review highlights, and an online table reservation module.",
+    "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=800&q=80",
+    "client": "Mocktail Bar",
+    "featured": false,
+    "liveUrl": "https://mocktailbar-beta.vercel.app/"
   }
 ];
 
 export const TESTIMONIALS = [
   {
-    id: 'test-1',
-    name: 'Sarah Jenkins',
-    role: 'VP of Product',
-    company: 'Apex Global Ltd (USA)',
-    productBuilt: 'Custom Full Stack SaaS Portal',
-    content: 'CodeNPixels exceeded all our expectations. They turned our complex CRM and billing wireframes into a fully responsive, secure full-stack platform that loads in milliseconds. Their attention to pixel accuracy and clean code is exceptional.',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=140&h=140&q=80',
-    verified: true,
-    date: 'February 2026'
+    "id": "test-1",
+    "name": "Sarah Jenkins",
+    "role": "VP of Product",
+    "company": "Apex Global Ltd (USA)",
+    "productBuilt": "Custom Full Stack SaaS Portal",
+    "content": "CodeNPixels exceeded all our expectations. They turned our complex CRM and billing wireframes into a fully responsive, secure full-stack platform that loads in milliseconds. Their attention to pixel accuracy and clean code is exceptional.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=140&h=140&q=80",
+    "verified": true,
+    "date": "February 2026"
   },
   {
-    id: 'test-2',
-    name: 'Rajesh Kumar Verma',
-    role: 'Founder & Managing Director',
-    company: 'Urban Bites Hospitality (India)',
-    productBuilt: 'Smart QR Menu & Cloud POS System',
-    content: 'The Smart QR Menu and Billing POS system built by CodeNPixels helped our 3 restaurant outlets reduce table ordering delays by 40%. The pricing was very affordable for our budget and the quality was top-notch.',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=140&h=140&q=80',
-    verified: true,
-    date: 'January 2026'
+    "id": "test-2",
+    "name": "Rajesh Kumar Verma",
+    "role": "Founder & Managing Director",
+    "company": "Urban Bites Hospitality (India)",
+    "productBuilt": "Smart QR Menu & Cloud POS System",
+    "content": "The Smart QR Menu and Billing POS system built by CodeNPixels helped our 3 restaurant outlets reduce table ordering delays by 40%. The pricing was very affordable for our budget and the quality was top-notch.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=140&h=140&q=80",
+    "verified": true,
+    "date": "January 2026"
   },
   {
-    id: 'test-3',
-    name: 'David MacIntyre',
-    role: 'Technical Director',
-    company: 'Veloce Digital (Canada)',
-    productBuilt: 'React & Next.js Headless Web App',
-    content: 'Finding reliable, high-speed React and TypeScript developers who understand modern web performance is tough. CodeNPixels delivered clean, bug-free components on schedule with 100/100 Core Web Vitals.',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=140&h=140&q=80',
-    verified: true,
-    date: 'March 2026'
+    "id": "test-3",
+    "name": "David MacIntyre",
+    "role": "Technical Director",
+    "company": "Veloce Digital (Canada)",
+    "productBuilt": "React & Next.js Headless Web App",
+    "content": "Finding reliable, high-speed React and TypeScript developers who understand modern web performance is tough. CodeNPixels delivered clean, bug-free components on schedule with 100/100 Core Web Vitals.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=140&h=140&q=80",
+    "verified": true,
+    "date": "March 2026"
   },
   {
-    id: 'test-4',
-    name: 'Pooja Sharma',
-    role: 'Creative Director',
-    company: 'Studio Aura (India & UK)',
-    productBuilt: 'Bespoke Portfolio & Branding Hub',
-    content: 'My new portfolio website has helped me close 4 high-ticket international design clients within a month of launch. The animations and sleek glassmorphic theme made all the difference.',
-    rating: 5,
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=140&h=140&q=80',
-    verified: true,
-    date: 'January 2026'
+    "id": "test-4",
+    "name": "Pooja Sharma",
+    "role": "Creative Director",
+    "company": "Studio Aura (India & UK)",
+    "productBuilt": "Bespoke Portfolio & Branding Hub",
+    "content": "My new portfolio website has helped me close 4 high-ticket international design clients within a month of launch. The animations and sleek glassmorphic theme made all the difference.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=140&h=140&q=80",
+    "verified": true,
+    "date": "January 2026"
   }
 ];
 
 export const PROCESS_STEPS = [
   {
-    step: 1,
-    title: 'Discovery & Strategy',
-    description: 'We listen to your business goals, map target audiences, analyze competitors, and scope requirements.',
-    details: [
-      'Client strategy session & focus mapping',
-      'Market & competitive landscape tracking',
-      'Technical feasibility audits & dependency reviews',
-      'Project scope breakdown & high-level specification'
+    "step": 1,
+    "title": "Discovery & Strategy",
+    "description": "We listen to your business goals, map target audiences, analyze competitors, and scope requirements.",
+    "details": [
+      "Client strategy session & focus mapping",
+      "Market & competitive landscape tracking",
+      "Technical feasibility audits & dependency reviews",
+      "Project scope breakdown & high-level specification"
     ],
-    icon: 'Compass'
+    "icon": "Compass"
   },
   {
-    step: 2,
-    title: 'Architecture & Planning',
-    description: 'We formalize software architectures, model relational data schemas, and detail interactive roadmaps.',
-    details: [
-      'Database entity mapping (schemas & relationships)',
-      'Site structural layouts & route architectures',
-      'Feature milestone prioritization matrix',
-      'Sprint structures & deployment schedule alignments'
+    "step": 2,
+    "title": "Architecture & Planning",
+    "description": "We formalize software architectures, model relational data schemas, and detail interactive roadmaps.",
+    "details": [
+      "Database entity mapping (schemas & relationships)",
+      "Site structural layouts & route architectures",
+      "Feature milestone prioritization matrix",
+      "Sprint structures & deployment schedule alignments"
     ],
-    icon: 'CalendarDays'
+    "icon": "CalendarDays"
   },
   {
-    step: 3,
-    title: 'UI/UX Design',
-    description: 'We craft immersive wireframes, typographic styles, palettes, and clickable Figma prototypes.',
-    details: [
-      'Wireframing client user-journeys from scratch',
-      'Premium dark & light mode styling systems',
-      'High-fidelity custom visual compositions',
-      'Active click-through Figma user testing flows'
+    "step": 3,
+    "title": "UI/UX Design",
+    "description": "We craft immersive wireframes, typographic styles, palettes, and clickable Figma prototypes.",
+    "details": [
+      "Wireframing client user-journeys from scratch",
+      "Premium dark & light mode styling systems",
+      "High-fidelity custom visual compositions",
+      "Active click-through Figma user testing flows"
     ],
-    icon: 'Figma'
+    "icon": "Figma"
   },
   {
-    step: 4,
-    title: 'Clean Engineering',
-    description: 'Writing semantic, heavily typed React components and robust backend controller schemas.',
-    details: [
-      'Strictly typed TypeScript development principles',
-      'Custom animations using Motion logic',
-      'Robust server route structures & API proxies',
-      'Lint validations & modular code architecture splitting'
+    "step": 4,
+    "title": "Clean Engineering",
+    "description": "Writing semantic, heavily typed React components and robust backend controller schemas.",
+    "details": [
+      "Strictly typed TypeScript development principles",
+      "Custom animations using Motion logic",
+      "Robust server route structures & API proxies",
+      "Lint validations & modular code architecture splitting"
     ],
-    icon: 'Terminal'
+    "icon": "Terminal"
   },
   {
-    step: 5,
-    title: 'Testing & QA',
-    description: 'Rigorous validation audits covering core page speeds, visual elements, accessibility, and form security.',
-    details: [
-      'Speed analysis running Google Lighthouse tools',
-      'Visual layout validation across standard screens',
-      'User input security sanitization tests',
-      'Cross-platform layout responsiveness audits'
+    "step": 5,
+    "title": "Testing & QA",
+    "description": "Rigorous validation audits covering core page speeds, visual elements, accessibility, and form security.",
+    "details": [
+      "Speed analysis running Google Lighthouse tools",
+      "Visual layout validation across standard screens",
+      "User input security sanitization tests",
+      "Cross-platform layout responsiveness audits"
     ],
-    icon: 'CheckSquare'
+    "icon": "CheckSquare"
   },
   {
-    step: 6,
-    title: 'Cloud Deployment',
-    description: 'Deploying your code securely to performant CDN hosting engines with caching grids.',
-    details: [
-      'Automated deployment integration rigs (Netlify / Vercel)',
-      'Global CDN file-serving optimization nodes',
-      'Domain routing, SSL setup, and security enforcement',
-      'Post-deployment runtime monitoring systems'
+    "step": 6,
+    "title": "Cloud Deployment",
+    "description": "Deploying your code securely to performant CDN hosting engines with caching grids.",
+    "details": [
+      "Automated deployment integration rigs (Netlify / Vercel)",
+      "Global CDN file-serving optimization nodes",
+      "Domain routing, SSL setup, and security enforcement",
+      "Post-deployment runtime monitoring systems"
     ],
-    icon: 'Rocket'
+    "icon": "Rocket"
   },
   {
-    step: 7,
-    title: 'Support & Growth',
-    description: 'Providing steady asset auditing, security upgrades, Core Web Vitals sweeps, and optimization.',
-    details: [
-      '24/7 cloud performance health sweeps',
-      'Periodic framework & library dependency upgrades',
-      'Dynamic feature scaling & sprint expansion paths',
-      'Regular security threat model evaluations'
+    "step": 7,
+    "title": "Support & Growth",
+    "description": "Providing steady asset auditing, security upgrades, Core Web Vitals sweeps, and optimization.",
+    "details": [
+      "24/7 cloud performance health sweeps",
+      "Periodic framework & library dependency upgrades",
+      "Dynamic feature scaling & sprint expansion paths",
+      "Regular security threat model evaluations"
     ],
-    icon: 'ShieldCheck'
+    "icon": "ShieldCheck"
   }
 ];
 
 export const FAQS = [
   {
-    id: 'faq-1',
-    question: 'How do you structure your project pricing for clients?',
-    answer: 'We provide transparent, upfront pricing in USD ($) for clients across the USA, UK, Canada, Australia, Europe, and worldwide. We offer fixed-scope milestone packages starting from $129 for portfolios and $249 for custom business websites, as well as competitive hourly rates ($15/hr) with zero hidden fees.',
-    topic: 'Pricing'
+    "id": "faq-1",
+    "question": "How do you structure your project pricing for clients?",
+    "answer": "We provide transparent, upfront pricing in USD ($) for clients across the USA, UK, Canada, Australia, Europe, and worldwide. We offer fixed-scope milestone packages starting from $129 for portfolios and $249 for custom business websites, as well as competitive hourly rates ($15/hr) with zero hidden fees.",
+    "topic": "Pricing"
   },
   {
-    id: 'faq-2',
-    question: 'Can you build custom systems like POS, Billing Software, or Smart QR Menus?',
-    answer: 'Yes! We specialize in lightweight, lightning-fast business software including Smart QR restaurant menus, custom POS counters with thermal receipt printing, GST/Tax billing software, and custom cloud ERP systems.',
-    topic: 'Services'
+    "id": "faq-2",
+    "question": "Can you build custom systems like POS, Billing Software, or Smart QR Menus?",
+    "answer": "Yes! We specialize in lightweight, lightning-fast business software including Smart QR restaurant menus, custom POS counters with thermal receipt printing, GST/Tax billing software, and custom cloud ERP systems.",
+    "topic": "Services"
   },
   {
-    id: 'faq-3',
-    question: 'Can you work with an existing developer or design team?',
-    answer: 'Absolutely. We regularly collaborate with in-house tech teams. We merge cleanly into your workflows, utilizing GitHub branching standards, specific architecture patterns, Slack channels, and standard project management tools.',
-    topic: 'Collaboration'
+    "id": "faq-3",
+    "question": "Can you work with an existing developer or design team?",
+    "answer": "Absolutely. We regularly collaborate with in-house tech teams. We merge cleanly into your workflows, utilizing GitHub branching standards, specific architecture patterns, Slack channels, and standard project management tools.",
+    "topic": "Collaboration"
   },
   {
-    id: 'faq-4',
-    question: 'What is your typical development process?',
-    answer: 'We utilize a streamlined 7-step timeline: Discovery, Architecture Planning, UI/UX Design, Clean Engineering, Testing & QA, Cloud Deployment, and Ongoing Support. You receive active demonstrations at every milestone.',
-    topic: 'Process'
+    "id": "faq-4",
+    "question": "What is your typical development process?",
+    "answer": "We utilize a streamlined 7-step timeline: Discovery, Architecture Planning, UI/UX Design, Clean Engineering, Testing & QA, Cloud Deployment, and Ongoing Support. You receive active demonstrations at every milestone.",
+    "topic": "Process"
   },
   {
-    id: 'faq-5',
-    question: 'Do you write automated tests and audits for deliverables?',
-    answer: 'Yes. Every backend API and React layout undergoes component validation, accessibility checks, and Core Web Vitals speed tests to ensure production readiness.',
-    topic: 'Quality'
+    "id": "faq-5",
+    "question": "Do you write automated tests and audits for deliverables?",
+    "answer": "Yes. Every backend API and React layout undergoes component validation, accessibility checks, and Core Web Vitals speed tests to ensure production readiness.",
+    "topic": "Quality"
   },
   {
-    id: 'faq-6',
-    question: 'How long does a typical custom website take to develop?',
-    answer: 'Standard portfolio websites and landing pages take 4 to 7 business days, while complete multi-page web applications with custom databases typically span 2 to 4 weeks.',
-    topic: 'Timeline'
+    "id": "faq-6",
+    "question": "How long does a typical custom website take to develop?",
+    "answer": "Standard portfolio websites and landing pages take 4 to 7 business days, while complete multi-page web applications with custom databases typically span 2 to 4 weeks.",
+    "topic": "Timeline"
   },
   {
-    id: 'faq-7',
-    question: 'Do you offer post-launch maintenance SLA guarantees?',
-    answer: 'Yes! We supply dedicated maintenance packages including continuous security auditing, database backup checks, Core Web Vitals speed tuning, and rapid bug-fix SLAs starting at $79/mo.',
-    topic: 'Support'
+    "id": "faq-7",
+    "question": "Do you offer post-launch maintenance SLA guarantees?",
+    "answer": "Yes! We supply dedicated maintenance packages including continuous security auditing, database backup checks, Core Web Vitals speed tuning, and rapid bug-fix SLAs starting at $79/mo.",
+    "topic": "Support"
   }
 ];
 
 export const COMPANY_INFO = {
-  name: 'CodeNPixels',
-  legalName: 'CodeNPixels Digital Consultancy',
-  tagline: 'AI-Powered Web Development & Digital Solutions',
-  description: 'CodeNPixels is a premier AI-powered web development and digital consultancy specializing in custom website design, React, Next.js, Node.js full-stack development, UI/UX design, Smart QR Menu systems, POS/Billing software, and Core Web Vitals SEO optimization.',
-  url: 'https://codenpixels.in',
-  email: 'codenpixel.2022@gmail.com',
-  phone: '+91 7008404037',
-  location: {
-    city: 'Bhubaneswar',
-    region: 'Odisha',
-    country: 'India',
-    countryCode: 'IN',
-    addressDisplay: 'Bhubaneswar, Odisha, India & Remote Worldwide'
+  "name": "CodeNPixels",
+  "legalName": "CodeNPixels Digital Consultancy",
+  "tagline": "AI-Powered Web Development & Digital Solutions",
+  "description": "CodeNPixels is a premier AI-powered web development and digital consultancy specializing in custom website design, React, Next.js, Node.js full-stack development, UI/UX design, Smart QR Menu systems, POS/Billing software, and Core Web Vitals SEO optimization.",
+  "url": "https://codenpixels.in",
+  "email": "codenpixel.2022@gmail.com",
+  "phone": "+91 7008404037",
+  "location": {
+    "city": "Bhubaneswar",
+    "region": "Odisha",
+    "country": "India",
+    "countryCode": "IN",
+    "addressDisplay": "Bhubaneswar, Odisha, India & Remote Worldwide"
   },
-  foundingYear: '2022',
-  social: {
-    github: 'https://github.com/Chintusa/codenPixels',
-    linkedin: 'https://linkedin.com/company/codenpixels',
-    twitter: 'https://twitter.com/codenpixels'
+  "foundingYear": "2022",
+  "social": {
+    "github": "https://github.com/Chintusa/codenPixels",
+    "linkedin": "https://linkedin.com/company/codenpixels",
+    "twitter": "https://twitter.com/codenpixels"
   }
 };

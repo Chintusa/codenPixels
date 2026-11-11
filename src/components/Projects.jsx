@@ -191,7 +191,7 @@ export const Projects = ({ onNavigate, isStandalone = false }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-md flex items-center justify-center p-4"
+              className="fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4"
               onClick={() => setSelectedProject(null)}
             >
               <motion.div

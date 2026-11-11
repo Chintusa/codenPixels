@@ -348,7 +348,7 @@ export default function App({ initialPath }) {
       <Navbar currentPath={currentPath} onNavigate={navigateTo} />
 
       {/* Main Core View Area */}
-      <main id="main-content" className="flex-grow z-10 relative">
+      <main id="main-content" className="flex-grow relative">
         <AnimatePresence mode="wait">
           {renderCurrentView()}
         </AnimatePresence>
