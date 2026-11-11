@@ -503,6 +503,40 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
+    id: 'luxury-lens-studio',
+    slug: 'luxury-lens-studio',
+    name: 'Luxury Lens Studio (Lumière)',
+    category: 'Frontend',
+    type: 'Luxury Photography & Cinematography Showcase',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Radix UI', 'TypeScript', 'GitHub Pages'],
+    description:
+      'An editorial luxury destination wedding photography and cinematography portfolio with noir-gold aesthetic, awards gallery, and consultation booking.',
+    longDescription:
+      'Lumière Luxury Lens Studio is a world-class editorial photography and cinematography showcase platform engineered for luxury destination weddings across Paris, Lake Como, Udaipur, and Bali. Designed with a bespoke noir-and-champagne gold aesthetic, it features 60fps Framer Motion transitions, full-bleed film reels, client story showcases, and an interactive consultation booking interface.',
+    image:
+      'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=85&w=1200',
+    client: 'Lumière Studio',
+    featured: true,
+    liveUrl: 'https://chintusa.github.io/Luxury-Lens-Studio/'
+  },
+  {
+    id: 'odisha-cover-studio',
+    slug: 'odisha-cover-studio',
+    name: 'Odisha Cover Studio',
+    category: 'E-Commerce',
+    type: 'Cultural E-Commerce & Custom Device Studio',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'GitHub Pages', 'WhatsApp API'],
+    description:
+      'A specialized cultural lifestyle e-commerce and device lamination studio showcasing Sambalpuri Ikat cases, Jagannath art covers, and wholesale ordering.',
+    longDescription:
+      'Odisha Cover Studio is an authentic lifestyle and mobile accessories digital platform celebrating Odishan culture and heritage. It features high-resolution Sambalpuri, Jagannath, and tribal artwork collections, an interactive custom printing inquiry flow, mobile back lamination appointment booking, and a dedicated wholesale partner program with 1-click WhatsApp checkout.',
+    image:
+      'https://images.unsplash.com/photo-1598414726047-c0af34b33ab0?w=1000&auto=format&fit=crop&q=80',
+    client: 'Odisha Cover Studio',
+    featured: true,
+    liveUrl: 'https://chintusa.github.io/Odisha-Cover-Studio/'
+  },
+  {
     id: 'twogoco-clone',
     slug: 'twogoco-clone',
     name: 'TwoGoCo Travel Portal',
@@ -519,23 +553,6 @@ export const PROJECTS = [
     featured: true,
     liveUrl:
       'https://twogoco-clone-nohjy699e-prangyanjali-mehers-projects.vercel.app/'
-  },
-  {
-    id: 'odisha-cover-studio',
-    slug: 'odisha-cover-studio',
-    name: 'Sambalpuri Cover Studio',
-    category: 'E-Commerce',
-    type: 'E-Commerce Product Showcase Website',
-    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI', 'Replit'],
-    description:
-      'A mobile cover e-commerce product showcase website with category filtering, shopping interface, and WhatsApp direct ordering.',
-    longDescription:
-      'Sambalpuri Cover Studio is a business website engineered for a mobile accessory brand. It presents product catalogs in a clear grid with category filters, customer ratings, and direct ordering channels.',
-    image:
-      'https://images.unsplash.com/photo-1598414726047-c0af34b33ab0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9iaWxlJTIwY292ZXJ8ZW58MHx8MHx8fDA%3D',
-    client: 'Odisha Cover Studio',
-    featured: true,
-    liveUrl: 'https://odisha-cover-studio--kssahujsg.replit.app/'
   },
   {
     id: 'hotel-landing-page',
