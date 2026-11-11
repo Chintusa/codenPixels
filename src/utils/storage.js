@@ -2,7 +2,7 @@ import { SERVICES as defaultServices, PROJECTS as defaultProjects, TESTIMONIALS 
 
 const STORAGE_KEYS = {
   SERVICES: 'codenpixels_services_v1',
-  PROJECTS: 'codenpixels_projects_v2',
+  PROJECTS: 'codenpixels_projects_v3',
   TESTIMONIALS: 'codenpixels_testimonials_v1',
   CURRENCY: 'codenpixels_currency_pref'
 };

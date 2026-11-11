@@ -537,6 +537,74 @@ export const PROJECTS = [
     liveUrl: 'https://chintusa.github.io/Odisha-Cover-Studio/'
   },
   {
+    id: 'luxury-hospitality',
+    slug: 'luxury-hospitality',
+    name: 'AURA Sanctuary & Private Residences',
+    category: 'Full Stack',
+    type: 'Ultra-Luxury Hospitality & Villa Booking Platform',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'GitHub Pages'],
+    description:
+      'An ultra-luxury hospitality destination web app featuring cliffside private villa showcases, Michelin-starred gastronomy menus, and suite inquiries.',
+    longDescription:
+      'AURA Sanctuary & Private Residences is a flagship ultra-luxury hospitality web platform designed for discerning global travelers. Features interactive cliffside villa tours, curated seasonal experience itineraries, holistic spa wellness booking, Michelin-starred fine dining menus, and an automated private concierge inquiry channel.',
+    image:
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1000&auto=format&fit=crop&q=80',
+    client: 'AURA Hospitality Group',
+    featured: true,
+    liveUrl: 'https://chintusa.github.io/luxury-hospitality/'
+  },
+  {
+    id: 'samaleswari-bastralay-billing',
+    slug: 'samaleswari-bastralay-billing',
+    name: 'Samaleswari Bastralay Smart Bill',
+    category: 'Full Stack',
+    type: 'Retail POS & Offline GST Billing Software',
+    technologies: ['React', 'Tailwind CSS', 'Offline-First', 'PDF Generator', 'WhatsApp API', 'Netlify'],
+    description:
+      'A lightning-fast, offline-capable retail point-of-sale system with automated GST calculations, thermal print receipts, and WhatsApp invoice dispatch.',
+    longDescription:
+      'Smart Bill is a robust, offline-first enterprise retail billing and POS system developed for busy retail and garment stores. Built by CodeNPixels, it features instant barcode/item entry, automated multi-rate GST tax compliance, keyboard-driven express checkout (F2/Ctrl+P), instant thermal printer output, PDF generation, and direct 1-tap WhatsApp invoice delivery.',
+    image:
+      'https://images.unsplash.com/photo-1556742049-0a67c5574f73?w=1000&auto=format&fit=crop&q=80',
+    client: 'Samaleswari Bastralay',
+    featured: true,
+    liveUrl: 'https://samaleswari-bastralay-billing.netlify.app/'
+  },
+  {
+    id: 'harry-visuals',
+    slug: 'harry-visuals',
+    name: 'Harry Visuals (Actor & Model Portfolio)',
+    category: 'Frontend',
+    type: 'Celebrity Actor & Fitness Model Showcase Platform',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'YouTube API', 'Netlify'],
+    description:
+      'A high-octane personal branding platform for Sambalpuri film star Harry (250M+ views, 147K+ fans) with editorial galleries and casting inquiries.',
+    longDescription:
+      'Harry Visuals is a high-impact personal media portfolio engineered by CodeNPixels for leading Sambalpuri actor, dancer, and fitness influencer Harry. It features categorized editorial galleries (Fashion, Fitness, Expressions, Calisthenics), integrated high-stream YouTube music video showcases with real-time analytics, and an integrated booking and commercial representation desk.',
+    image:
+      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1000&auto=format&fit=crop&q=80',
+    client: 'Harry Official',
+    featured: true,
+    liveUrl: 'https://harry-visuals.netlify.app/'
+  },
+  {
+    id: 'alambana',
+    slug: 'alambana',
+    name: 'Alambana Home Services Platform',
+    category: 'Full Stack',
+    type: 'On-Demand Local Services & Gig Worker Marketplace',
+    technologies: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'REST API', 'Netlify'],
+    description:
+      'A multi-service on-demand marketplace connecting households with verified local service professionals (tutors, plumbers, yoga, car care).',
+    longDescription:
+      'Alambana is a community-focused gig economy and household services marketplace platform. It allows users to quickly search, hire, and schedule trusted local professionals for home tutoring, plumbing, car washing, yoga instruction, and housekeeping, supported by dedicated dual registration portals for customers and gig workers.',
+    image:
+      'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1000&auto=format&fit=crop&q=80',
+    client: 'Alambana Services',
+    featured: true,
+    liveUrl: 'https://alambana.netlify.app/'
+  },
+  {
     id: 'twogoco-clone',
     slug: 'twogoco-clone',
     name: 'TwoGoCo Travel Portal',
@@ -550,7 +618,7 @@ export const PROJECTS = [
     image:
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
     client: 'Showcase Project',
-    featured: true,
+    featured: false,
     liveUrl:
       'https://twogoco-clone-nohjy699e-prangyanjali-mehers-projects.vercel.app/'
   },
@@ -568,7 +636,7 @@ export const PROJECTS = [
     image:
       'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG90ZWx8ZW58MHx8MHx8fDA%3D',
     client: 'AI Studio Project',
-    featured: true,
+    featured: false,
     liveUrl:
       'https://aistudio.google.com/apps/1296ccff-2786-4438-ba97-a2be72ef9ced?fullscreenApplet=true&showPreview=true&showAssistant=true'
   },
@@ -586,7 +654,7 @@ export const PROJECTS = [
     image:
       'https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=800&q=80',
     client: 'Mocktail Bar',
-    featured: true,
+    featured: false,
     liveUrl: 'https://mocktailbar-beta.vercel.app/'
   }
 ];
