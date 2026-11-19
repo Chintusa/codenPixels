@@ -28,16 +28,20 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
       label: '$350 - $600 (Custom Web / Smart Menu / POS / Billing)'
     },
     {
-      value: '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)',
-      label: '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)'
+      value: '$600 - $1,000 (AI Web App / Full Stack / Cloud Backend)',
+      label: '$600 - $1,000 (AI Web App / Full Stack / Cloud Backend)'
     },
     {
-      value: '$1,200 - $2,500 (Cloud ERP / Client Acquisition Systems / SaaS)',
-      label: '$1,200 - $2,500 (Cloud ERP / Client Acquisition Systems / SaaS)'
+      value: '$1,000 - $1,500 (AI Funnels & Client Acquisition Automation)',
+      label: '$1,000 - $1,500 (AI Funnels & Client Acquisition Automation)'
     },
     {
-      value: '$2,500+ (Enterprise Multi-Tenant App / Scaled Architecture)',
-      label: '$2,500+ (Enterprise Multi-Tenant App / Scaled Architecture)'
+      value: '$1,500 - $3,000 (Cloud ERP / Enterprise Funnel Systems / SaaS)',
+      label: '$1,500 - $3,000 (Cloud ERP / Enterprise Funnel Systems / SaaS)'
+    },
+    {
+      value: '$3,000+ (Enterprise Multi-Tenant App / Scaled Architecture)',
+      label: '$3,000+ (Enterprise Multi-Tenant App / Scaled Architecture)'
     },
     {
       value: '$50 - $200/mo (Ongoing Maintenance & SLA Retainer)',
@@ -59,21 +63,24 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
   // Helper to map a service's starting price to its corresponding budget tier
   const getBudgetForService = (serviceTitle) => {
     const matched = services.find(s => s.title === serviceTitle || s.slug === serviceTitle);
-    if (!matched) return BUDGET_OPTIONS[2].value;
+    if (!matched) return BUDGET_OPTIONS[3].value; // $1,000 - $1,500 default for top service
 
     const priceStr = String(matched.startingPriceUsd || '');
     if (priceStr.includes('/mo')) {
       return '$50 - $200/mo (Ongoing Maintenance & SLA Retainer)';
     }
     const num = parseInt(priceStr.replace(/[^0-9]/g, ''), 10) || 300;
-    if (num >= 2000) {
-      return '$2,500+ (Enterprise Multi-Tenant App / Scaled Architecture)';
+    if (num >= 3000) {
+      return '$3,000+ (Enterprise Multi-Tenant App / Scaled Architecture)';
     }
-    if (num >= 900) {
-      return '$1,200 - $2,500 (Cloud ERP / Client Acquisition Systems / SaaS)';
+    if (num >= 1500) {
+      return '$1,500 - $3,000 (Cloud ERP / Enterprise Funnel Systems / SaaS)';
     }
-    if (num >= 500) {
-      return '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)';
+    if (num >= 1000) {
+      return '$1,000 - $1,500 (AI Funnels & Client Acquisition Automation)';
+    }
+    if (num >= 600) {
+      return '$600 - $1,000 (AI Web App / Full Stack / Cloud Backend)';
     }
     if (num >= 300) {
       return '$350 - $600 (Custom Web / Smart Menu / POS / Billing)';
@@ -90,7 +97,7 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
       email: '',
       company: '',
       projectType: firstService,
-      budget: '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)',
+      budget: '$1,000 - $1,500 (AI Funnels & Client Acquisition Automation)',
       message: ''
     };
   });
@@ -132,12 +139,14 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
   // Applies the calculated estimate to the contact form fields
   const handleApplyEstimateToForm = () => {
     let budgetBucket = BUDGET_OPTIONS[0].value;
-    if (estimate.price >= 2500) {
-      budgetBucket = BUDGET_OPTIONS[4].value; // $2,500+
-    } else if (estimate.price >= 1200) {
-      budgetBucket = BUDGET_OPTIONS[3].value; // $1,200 - $2,500
+    if (estimate.price >= 3000) {
+      budgetBucket = BUDGET_OPTIONS[5].value; // $3,000+
+    } else if (estimate.price >= 1500) {
+      budgetBucket = BUDGET_OPTIONS[4].value; // $1,500 - $3,000
+    } else if (estimate.price >= 1000) {
+      budgetBucket = BUDGET_OPTIONS[3].value; // $1,000 - $1,500
     } else if (estimate.price >= 600) {
-      budgetBucket = BUDGET_OPTIONS[2].value; // $600 - $1,200
+      budgetBucket = BUDGET_OPTIONS[2].value; // $600 - $1,000
     } else if (estimate.price >= 350) {
       budgetBucket = BUDGET_OPTIONS[1].value; // $350 - $600
     } else {
@@ -322,7 +331,7 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
           email: '',
           company: '',
           projectType: firstService,
-          budget: '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)',
+          budget: '$1,000 - $1,500 (AI Funnels & Client Acquisition Automation)',
           message: ''
         });
         setErrors({});

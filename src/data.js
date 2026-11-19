@@ -1,4 +1,4 @@
-export const DATA_VERSION = 'v1795086505926';
+export const DATA_VERSION = 'v1795093700000';
 
 export const SERVICES = [
   {
@@ -11,7 +11,7 @@ export const SERVICES = [
     "description": "End-to-end automated client acquisition systems: interactive diagnostic funnels, AI lead qualification, timezone-aware calendar booking, and CRM pipelines.",
     "longDescription": "Acquiring high-paying international clients across the United States, United Kingdom, and Australia requires more than a generic contact form. At CodeNPixels, we engineer complete, autonomous Client Acquisition Systems that guide prospects from discovery to contract: high-converting landing pages, interactive diagnostic scorecards that pre-qualify leads, AI-driven nurturing drips (Email & SMS), automated timezone-adjusted scheduling (EST, PST, GMT, AEST), and bi-directional CRM pipeline synchronizations. Stop manually chasing leads across timezones—let an intelligent digital architecture fill your calendar with pre-sold, qualified decision-makers.",
     "icon": "Workflow",
-    "startingPriceUsd": "$600",
+    "startingPriceUsd": "$1,000",
     "businessProblem": "High-ticket coaches, consultants, and B2B agencies targeting international clients in the US, UK, and Australia often bleed revenue due to generic contact forms, tire-kickers who cannot afford their rates, low calendar show-up rates, and exhausting manual follow-ups across 3 to 14-hour timezone gaps.",
     "solution": "We construct custom, end-to-end AI Client Acquisition Funnels. We replace static forms with interactive assessment scorecards that calculate lead viability in real time, route qualified prospects to timezone-synchronized booking calendars, trigger dynamic multi-day nurture sequences, and push rich lead telemetry straight into your CRM.",
     "features": [
