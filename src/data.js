@@ -1,4 +1,4 @@
-export const DATA_VERSION = 'v1794416723008';
+export const DATA_VERSION = 'v1794500000000';
 
 export const SERVICES = [
   {
@@ -577,6 +577,28 @@ export const SERVICES = [
 ];
 
 export const PROJECTS = [
+  {
+    "id": "elevate-coaching",
+    "slug": "elevate-coaching",
+    "name": "Elevate Coaching — Client Acquisition System",
+    "category": "Full Stack",
+    "type": "Coach Client Acquisition & CRM Funnel",
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Interactive Scorecard",
+      "Timezone Calendar",
+      "Kanban CRM Pipeline",
+      "Automated Nurturing"
+    ],
+    "description": "A high-converting client acquisition system and live CRM pipeline engineered for business coaches targeting clients across the USA, UK, and Australia.",
+    "longDescription": "Elevate Coaching is an end-to-end client acquisition demonstration platform built for high-ticket online business and executive coaches targeting the USA, UK, and Australia. Engineered by CodeNPixels, it features an interactive 0–100 Growth Scorecard diagnostic lead magnet, real-time qualification tiering, automated 5-stage email drip nurturing, timezone-aware discovery call booking (US, UK, and Australia), and an interactive back-office CRM Kanban pipeline.",
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=85&w=1200",
+    "client": "Elevate Coaching (Concept Demo)",
+    "featured": true,
+    "liveUrl": "https://github.com/Chintusa/elevate-coaching-"
+  },
   {
     "id": "luxury-lens-studio",
     "slug": "luxury-lens-studio",
