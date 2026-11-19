@@ -48,6 +48,12 @@ const routes = [
     type: 'website'
   },
   {
+    path: '/admin',
+    title: 'Admin Management Console | CodeNPixels',
+    description: 'CodeNPixels internal administration and content management dashboard.',
+    type: 'website'
+  },
+  {
     path: '/404.html',
     title: '404 - Page Not Found | CodeNPixels',
     description: 'The requested page could not be found. Return to CodeNPixels homepage to explore our web development services and portfolio.',

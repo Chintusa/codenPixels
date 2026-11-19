@@ -64,6 +64,33 @@ export default function App({ initialPath }) {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  // Synchronize document title with current route dynamically
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+
+    if (currentPath === '/') {
+      document.title = 'CodeNPixels | AI Web Development & Digital Solutions';
+    } else if (currentPath === '/admin') {
+      document.title = 'Admin Management Console | CodeNPixels';
+    } else if (currentPath === '/services') {
+      document.title = 'Web Development & Digital Services | CodeNPixels';
+    } else if (currentPath === '/projects') {
+      document.title = 'Portfolio & Web Development Case Studies | CodeNPixels';
+    } else if (currentPath === '/about') {
+      document.title = 'About Us | CodeNPixels Digital Consultancy';
+    } else if (currentPath === '/process') {
+      document.title = 'Our 7-Step Development Methodology | CodeNPixels';
+    } else if (currentPath === '/contact') {
+      document.title = 'Contact Us & Project Estimator | CodeNPixels';
+    } else if (currentPath.startsWith('/services/')) {
+      const slug = currentPath.replace('/services/', '');
+      const srv = servicesList.find((s) => s.slug === slug || s.id === slug);
+      document.title = srv ? (srv.metaTitle || `${srv.title} | CodeNPixels`) : 'Service Details | CodeNPixels';
+    } else {
+      document.title = '404 - Page Not Found | CodeNPixels';
+    }
+  }, [currentPath, servicesList]);
+
   // Universal navigation handler for SPA link clicks
   const navigateTo = (path) => {
     const targetPath = normalizePath(path);
