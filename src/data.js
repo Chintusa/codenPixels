@@ -1,4 +1,4 @@
-export const DATA_VERSION = 'v1794500000002';
+export const DATA_VERSION = 'v1795086505926';
 
 export const SERVICES = [
   {
@@ -57,7 +57,8 @@ export const SERVICES = [
         "question": "Do you support multi-currency payment collection (USD $, GBP £, AUD $)?",
         "answer": "Yes, we configure multi-currency Stripe checkout sessions, recurring retainer agreements, and split-payment billing so international clients can transact frictionlessly in their local currency."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "web-development",
@@ -107,7 +108,8 @@ export const SERVICES = [
         "question": "Do you provide maintenance and updates after launch?",
         "answer": "Yes, we provide post-launch support and continuous maintenance SLAs covering security patches, performance sweeps, and feature revisions."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "portfolio-design",
@@ -152,7 +154,8 @@ export const SERVICES = [
         "question": "How fast can a custom portfolio website be delivered?",
         "answer": "Standard bespoke portfolio websites are typically delivered within 5 to 7 business days."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "smart-menu-system",
@@ -197,7 +200,8 @@ export const SERVICES = [
         "question": "Can I change prices or mark items as sold out in real-time?",
         "answer": "Yes, our smart menu includes an intuitive owner dashboard where you can toggle availability and update prices instantly from your phone."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "billing-software",
@@ -242,7 +246,8 @@ export const SERVICES = [
         "question": "Can it handle international billing with different currencies?",
         "answer": "Yes, it natively supports USD, EUR, GBP, AUD, and CAD with real-time conversion rates."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "pos-systems",
@@ -287,7 +292,8 @@ export const SERVICES = [
         "question": "Can it run offline if the internet disconnects temporarily?",
         "answer": "Yes! We engineer offline-first caching so cashiers can continue billing transactions smoothly and sync to cloud once connection restores."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "erp-software",
@@ -333,7 +339,8 @@ export const SERVICES = [
         "question": "How secure is the company data stored in the ERP?",
         "answer": "We implement bank-grade encryption at rest and in transit, multi-factor authentication, granular role permissions, and automated daily backups."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "ai-development",
@@ -379,7 +386,8 @@ export const SERVICES = [
         "question": "Is user data kept secure when using AI APIs?",
         "answer": "Yes. We strictly implement zero-retention API endpoints, environment variable encryption, and role-based access to safeguard your proprietary data."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "frontend",
@@ -421,7 +429,8 @@ export const SERVICES = [
         "question": "Do you convert Figma or Adobe XD designs into React code?",
         "answer": "Yes, we specialize in translating complex Figma, XD, or Sketch designs into pixel-perfect, responsive React and Tailwind CSS components."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "backend",
@@ -463,7 +472,8 @@ export const SERVICES = [
         "question": "Which databases do you recommend for web applications?",
         "answer": "We evaluate your data structure: PostgreSQL for relational, transactional, and ACID-compliant systems; MongoDB for flexible JSON document storage; and Redis for ultra-fast caching."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "fullstack",
@@ -506,7 +516,8 @@ export const SERVICES = [
         "question": "Can you build custom administrative dashboards and CRM tools?",
         "answer": "Yes. We specialize in building secure, data-rich admin consoles with real-time analytics, user role management, and exportable reports."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "ui-ux",
@@ -547,7 +558,8 @@ export const SERVICES = [
         "question": "Do you provide interactive Figma prototypes before writing code?",
         "answer": "Yes! We create clickable, interactive Figma prototypes so you can experience and test the exact user flows before any code is written."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "api-dev",
@@ -589,7 +601,8 @@ export const SERVICES = [
         "question": "Can you integrate payment gateways like Stripe or Razorpay?",
         "answer": "Yes. We implement secure checkout sessions, webhook handlers, subscription billing, and automated invoice delivery."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=85&w=1200"
   },
   {
     "id": "maintenance",
@@ -630,7 +643,8 @@ export const SERVICES = [
         "question": "How often do you perform security and maintenance checks?",
         "answer": "We run automated 24/7 uptime monitors, conduct weekly dependency and security audits, and perform deep monthly Core Web Vitals speed tuning."
       }
-    ]
+    ],
+    "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=85&w=1200"
   }
 ];
 
