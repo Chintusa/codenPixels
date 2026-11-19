@@ -1,6 +1,64 @@
-export const DATA_VERSION = 'v1794500000000';
+export const DATA_VERSION = 'v1794500000001';
 
 export const SERVICES = [
+  {
+    "id": "ai-funnels-automation",
+    "slug": "ai-funnels-automation",
+    "title": "AI Funnels & Client Acquisition Automation",
+    "h1Title": "AI-Powered Client Acquisition Funnels & Sales Automation for US, UK & AU Businesses",
+    "metaTitle": "AI Client Acquisition Funnels & Sales Automation | CodeNPixels",
+    "metaDescription": "Scale international client acquisition with custom AI funnels, interactive diagnostic scorecards, automated 24/7 lead qualification, and timezone-aware booking systems for US, UK, and Australian markets.",
+    "description": "End-to-end automated client acquisition systems: interactive diagnostic funnels, AI lead qualification, timezone-aware calendar booking, and CRM pipelines.",
+    "longDescription": "Acquiring high-paying international clients across the United States, United Kingdom, and Australia requires more than a generic contact form. At CodeNPixels, we engineer complete, autonomous Client Acquisition Systems that guide prospects from discovery to contract: high-converting landing pages, interactive diagnostic scorecards that pre-qualify leads, AI-driven nurturing drips (Email & SMS), automated timezone-adjusted scheduling (EST, PST, GMT, AEST), and bi-directional CRM pipeline synchronizations. Stop manually chasing leads across timezones—let an intelligent digital architecture fill your calendar with pre-sold, qualified decision-makers.",
+    "icon": "Workflow",
+    "startingPriceUsd": "$600",
+    "businessProblem": "High-ticket coaches, consultants, and B2B agencies targeting international clients in the US, UK, and Australia often bleed revenue due to generic contact forms, tire-kickers who cannot afford their rates, low calendar show-up rates, and exhausting manual follow-ups across 3 to 14-hour timezone gaps.",
+    "solution": "We construct custom, end-to-end AI Client Acquisition Funnels. We replace static forms with interactive assessment scorecards that calculate lead viability in real time, route qualified prospects to timezone-synchronized booking calendars, trigger dynamic multi-day nurture sequences, and push rich lead telemetry straight into your CRM.",
+    "features": [
+      "Interactive Diagnostic Scorecards & Lead Magnets (0-100 Scoring Engine)",
+      "Timezone-Smart Booking Calendars (US EST/PST, UK GMT/BST, AU AEST)",
+      "Multi-Stage Automated Email & SMS Nurture Sequences",
+      "Live Kanban CRM Pipelines with Drag-to-Advance Stage Tracking",
+      "AI Lead Scoring & Automated Qualification Filtering",
+      "Multi-Currency Stripe & High-Ticket Retainer Checkout Integrations",
+      "Webhook & Event-Driven API Pipelines (Make, Zapier, HubSpot, Slack)",
+      "Full Telemetry & Conversion Attribution Dashboards"
+    ],
+    "technologies": [
+      "React 19 / Next.js",
+      "AI Automation Engines",
+      "Interactive Scorecard Engine",
+      "Timezone Scheduling API",
+      "CRM Webhooks & Make",
+      "Tailwind CSS",
+      "Stripe Multi-Currency"
+    ],
+    "benefits": [
+      "Pre-Qualify International Leads: Filter out tire-kickers before they reach your calendar",
+      "24/7 Timezone-Independent Acquisition: Capture and nurture prospects while you sleep across US, UK & AU",
+      "Reclaim 15+ Founder Hours Weekly: Eliminate manual proposal drafting, email follow-ups, and scheduling friction",
+      "Higher Show-Up & Close Rates: Automated SMS/Email preparation briefs boost discovery call attendance to 85%+",
+      "Seamless CRM Visibility: Every lead, score, bottleneck, and booking automatically synced in real time"
+    ],
+    "faqs": [
+      {
+        "question": "How does an AI Client Acquisition Funnel work for international markets like the US, UK, and Australia?",
+        "answer": "We architect an interactive journey: your international visitors take a high-value diagnostic scorecard (e.g., Growth Scorecard, Readiness Audit) that evaluates their business in 120 seconds. The system calculates their score, assigns a qualification tier, automatically triggers a 5-stage automated email nurture sequence, and invites qualified prospects to select a call slot automatically displayed in their local timezone (EST, PST, GMT, or AEST)."
+      },
+      {
+        "question": "Can this funnel integrate with our existing CRM, email platform, and calendar?",
+        "answer": "Yes, absolutely. We build webhook and API integrations connecting your custom funnel to HubSpot, GoHighLevel, ActiveCampaign, Mailchimp, Calendly, Google Calendar, and Slack for instant lead notifications."
+      },
+      {
+        "question": "How does this improve lead quality compared to a standard 'Contact Us' form?",
+        "answer": "Static contact forms attract low-intent submissions and tire-kickers. An interactive diagnostic scorecard gamifies lead capture, reveals their exact budget, revenue run-rate, and primary bottleneck, and scores their qualification before they can ever book a slot on your executive calendar."
+      },
+      {
+        "question": "Do you support multi-currency payment collection (USD $, GBP £, AUD $)?",
+        "answer": "Yes, we configure multi-currency Stripe checkout sessions, recurring retainer agreements, and split-payment billing so international clients can transact frictionlessly in their local currency."
+      }
+    ]
+  },
   {
     "id": "web-development",
     "slug": "web-development",
