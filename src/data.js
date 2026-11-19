@@ -1,4 +1,4 @@
-export const DATA_VERSION = 'v1794500000001';
+export const DATA_VERSION = 'v1794500000002';
 
 export const SERVICES = [
   {
@@ -655,7 +655,8 @@ export const PROJECTS = [
     "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=85&w=1200",
     "client": "Elevate Coaching (Concept Demo)",
     "featured": true,
-    "liveUrl": "https://github.com/Chintusa/elevate-coaching-"
+    "liveUrl": "https://elevate-coaching-site.netlify.app/",
+    "githubUrl": "https://github.com/Chintusa/elevate-coaching"
   },
   {
     "id": "luxury-lens-studio",
