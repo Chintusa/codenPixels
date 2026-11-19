@@ -9,7 +9,7 @@ import {
   DollarSign,
   Globe
 } from 'lucide-react';
-import { STORAGE_UPDATE_EVENT } from '../utils/storage';
+import { getStoredServices, STORAGE_UPDATE_EVENT } from '../utils/storage';
 
 export const Contact = ({ onNavigate, isStandalone = false }) => {
   const WEB3FORMS_ACCESS_KEY = 'bfbb1c5c-3295-4e29-81d4-cdd2ac5ebd3c';
@@ -17,14 +17,82 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
   const HeadingTag = isStandalone ? 'h1' : 'h2';
   const currency = 'USD';
 
+  // Budget range tiers aligned with Services page pricing
+  const BUDGET_OPTIONS = [
+    {
+      value: '$150 - $350 (Starter / Portfolio / UI-UX Design)',
+      label: '$150 - $350 (Starter / Portfolio / UI-UX Design)'
+    },
+    {
+      value: '$350 - $600 (Custom Web / Smart Menu / POS / Billing)',
+      label: '$350 - $600 (Custom Web / Smart Menu / POS / Billing)'
+    },
+    {
+      value: '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)',
+      label: '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)'
+    },
+    {
+      value: '$1,200 - $2,500 (Cloud ERP / Client Acquisition Systems / SaaS)',
+      label: '$1,200 - $2,500 (Cloud ERP / Client Acquisition Systems / SaaS)'
+    },
+    {
+      value: '$2,500+ (Enterprise Multi-Tenant App / Scaled Architecture)',
+      label: '$2,500+ (Enterprise Multi-Tenant App / Scaled Architecture)'
+    },
+    {
+      value: '$50 - $200/mo (Ongoing Maintenance & SLA Retainer)',
+      label: '$50 - $200/mo (Ongoing Maintenance & SLA Retainer)'
+    }
+  ];
+
+  // Dynamic services list from storage
+  const [services, setServices] = useState(() => getStoredServices());
+
+  useEffect(() => {
+    const handleStorageUpdate = () => {
+      setServices(getStoredServices());
+    };
+    window.addEventListener(STORAGE_UPDATE_EVENT, handleStorageUpdate);
+    return () => window.removeEventListener(STORAGE_UPDATE_EVENT, handleStorageUpdate);
+  }, []);
+
+  // Helper to map a service's starting price to its corresponding budget tier
+  const getBudgetForService = (serviceTitle) => {
+    const matched = services.find(s => s.title === serviceTitle || s.slug === serviceTitle);
+    if (!matched) return BUDGET_OPTIONS[2].value;
+
+    const priceStr = String(matched.startingPriceUsd || '');
+    if (priceStr.includes('/mo')) {
+      return '$50 - $200/mo (Ongoing Maintenance & SLA Retainer)';
+    }
+    const num = parseInt(priceStr.replace(/[^0-9]/g, ''), 10) || 300;
+    if (num >= 2000) {
+      return '$2,500+ (Enterprise Multi-Tenant App / Scaled Architecture)';
+    }
+    if (num >= 900) {
+      return '$1,200 - $2,500 (Cloud ERP / Client Acquisition Systems / SaaS)';
+    }
+    if (num >= 500) {
+      return '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)';
+    }
+    if (num >= 300) {
+      return '$350 - $600 (Custom Web / Smart Menu / POS / Billing)';
+    }
+    return '$150 - $350 (Starter / Portfolio / UI-UX Design)';
+  };
+
   // Core Contact form states
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    company: '',
-    projectType: 'Portfolio & Personal Branding',
-    budget: '$129 - $350',
-    message: ''
+  const [form, setForm] = useState(() => {
+    const initialServices = getStoredServices();
+    const firstService = initialServices[0]?.title || 'AI Funnels & Client Acquisition Automation';
+    return {
+      name: '',
+      email: '',
+      company: '',
+      projectType: firstService,
+      budget: '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)',
+      message: ''
+    };
   });
 
   const [loading, setLoading] = useState(false);
@@ -63,12 +131,18 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
 
   // Applies the calculated estimate to the contact form fields
   const handleApplyEstimateToForm = () => {
-    let budgetBucket = '';
-    if (estimate.price > 1500) budgetBucket = '$1,500+';
-    else if (estimate.price > 900) budgetBucket = '$900 - $1,500';
-    else if (estimate.price > 500) budgetBucket = '$500 - $900';
-    else if (estimate.price > 250) budgetBucket = '$250 - $500';
-    else budgetBucket = '$129 - $250';
+    let budgetBucket = BUDGET_OPTIONS[0].value;
+    if (estimate.price >= 2500) {
+      budgetBucket = BUDGET_OPTIONS[4].value; // $2,500+
+    } else if (estimate.price >= 1200) {
+      budgetBucket = BUDGET_OPTIONS[3].value; // $1,200 - $2,500
+    } else if (estimate.price >= 600) {
+      budgetBucket = BUDGET_OPTIONS[2].value; // $600 - $1,200
+    } else if (estimate.price >= 350) {
+      budgetBucket = BUDGET_OPTIONS[1].value; // $350 - $600
+    } else {
+      budgetBucket = BUDGET_OPTIONS[0].value; // $150 - $350
+    }
 
     const formattedPrice = `$${estimate.price.toLocaleString('en-US')}`;
 
@@ -81,6 +155,29 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
     const formContainer = document.getElementById('actual-contact-form');
     if (formContainer) {
       formContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Handle service selection change and auto-suggest matching budget tier
+  const handleServiceChange = (e) => {
+    const selectedTitle = e.target.value;
+    const suggestedBudget = getBudgetForService(selectedTitle);
+
+    setForm(prev => ({
+      ...prev,
+      projectType: selectedTitle,
+      budget: suggestedBudget
+    }));
+
+    if (errors.projectType) {
+      setErrors(prev => ({
+        ...prev,
+        projectType: undefined
+      }));
+    }
+
+    if (submitError) {
+      setSubmitError('');
     }
   };
 
@@ -218,12 +315,14 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
 
       if (isSuccess) {
         setSuccess(true);
+        const initialServices = getStoredServices();
+        const firstService = initialServices[0]?.title || 'AI Funnels & Client Acquisition Automation';
         setForm({
           name: '',
           email: '',
           company: '',
-          projectType: 'Portfolio & Personal Branding',
-          budget: '$129 - $350',
+          projectType: firstService,
+          budget: '$600 - $1,200 (AI Funnels & Automation / AI Web App / Full Stack)',
           message: ''
         });
         setErrors({});
@@ -495,37 +594,46 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
 
                     {/* Project Category */}
                     <div>
-                      <label htmlFor="contact-project-type" className="block text-[10px] sm:text-xs font-bold text-[#1E293B] mb-1.5 sm:mb-2 tracking-wide uppercase">
-                        Service Required
-                      </label>
+                      <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                        <label htmlFor="contact-project-type" className="block text-[10px] sm:text-xs font-bold text-[#1E293B] tracking-wide uppercase">
+                          Service Required
+                        </label>
+                        <span className="text-[10px] font-mono text-primary font-bold">
+                          14 Active Services
+                        </span>
+                      </div>
 
                       <select
                         id="contact-project-type"
                         name="projectType"
                         value={form.projectType}
-                        onChange={handleInputChange}
+                        onChange={handleServiceChange}
                         className="w-full bg-white border border-slate-200 rounded-xl px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all outline-none"
                       >
-                        <option>Portfolio & Personal Branding</option>
-                        <option>Smart QR Menu System (Restaurants & Cafes)</option>
-                        <option>POS (Point of Sale) System</option>
-                        <option>Billing & Invoicing Software</option>
-                        <option>Cloud ERP & Multi-Branch Software</option>
-                        <option>Custom Web Application Development</option>
-                        <option>AI-Powered Web Development</option>
-                        <option>Frontend Engineering (React / Next.js)</option>
-                        <option>Backend Architecture & Cloud APIs</option>
-                        <option>UI/UX Design Systems</option>
-                        <option>Website Optimization & Maintenance</option>
+                        {services.map((srv) => {
+                          const formattedPrice = srv.startingPriceUsd
+                            ? ` (from ${srv.startingPriceUsd.startsWith('$') ? srv.startingPriceUsd : `$${srv.startingPriceUsd}`} USD)`
+                            : '';
+                          return (
+                            <option key={srv.slug || srv.id} value={srv.title}>
+                              {srv.title}{formattedPrice}
+                            </option>
+                          );
+                        })}
                       </select>
                     </div>
                   </div>
 
                   {/* Budget */}
                   <div>
-                    <label htmlFor="contact-budget" className="block text-[10px] sm:text-xs font-bold text-slate-700 mb-1.5 sm:mb-2 tracking-wide uppercase">
-                      Budget Range (USD $)
-                    </label>
+                    <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                      <label htmlFor="contact-budget" className="block text-[10px] sm:text-xs font-bold text-slate-700 tracking-wide uppercase">
+                        Budget Range (USD $)
+                      </label>
+                      <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 rounded-md font-bold">
+                        Service-Wise Rates
+                      </span>
+                    </div>
 
                     <select
                       id="contact-budget"
@@ -534,11 +642,11 @@ export const Contact = ({ onNavigate, isStandalone = false }) => {
                       onChange={handleInputChange}
                       className="w-full bg-white border border-slate-200 rounded-xl px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all outline-none"
                     >
-                      <option>$129 - $350 (Starter / Portfolio)</option>
-                      <option>$350 - $750 (Smart Menu / Business Site)</option>
-                      <option>$750 - $1,500 (Billing / POS / Web App)</option>
-                      <option>$1,500 - $3,000 (Cloud ERP / Full Stack)</option>
-                      <option>$3,000+ (Enterprise Multi-Tenant App)</option>
+                      {BUDGET_OPTIONS.map((opt) => (
+                        <option key={opt.value} value={opt.value}>
+                          {opt.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
